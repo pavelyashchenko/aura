@@ -7,11 +7,43 @@ block head
 
 block styles
   link(rel="stylesheet", href="css/libs.min.css")
-  link(rel="stylesheet", href="css/style.min.css")
+  link(rel="stylesheet", href="css/landing.min.css")
 
 block scripts 
-  script(src="js/libs.min.js")
-  script(src="js/main.js")
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
 
 block main
-  
+  section.intro
+    .intro__inner
+      .intro__info
+        h1.intro__title Aura Bank
+        p.intro__message
+          | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
+
+      .intro__illustration
+        canvas#canvas
+        +picture({
+          lazy: false,
+          path: "img/first/nft-viz.png",
+          attr: { "alt": "NFT" },
+          mainAttr: {
+            "class": "wow fadeIn",
+            "data-wow-duration": "2s",
+            "data-wow-offset": "10",
+            "data-wow-delay": ".1s"
+            }
+        })
+
+  section.results
+    .results__inner
+      .results__container
+        h3.results__title Our Results in Numbers
+        .results__wrapper
+          each val, key in {"Members": "22 880", "Turnover": "567 123", "Transactions": "36 789"}
+            .results__block
+              h5.results__block-title= key
+              p.results__block-numbers= val
+
+  section.pass
+    

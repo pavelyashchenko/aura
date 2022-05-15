@@ -9,6 +9,7 @@
   "author": "Pavel Yashchenko",
   "license": "ISC",
   "devDependencies": {
+    "@bijection/smoke": "^1.0.2",
     "browser-sync": "^2.26.7",
     "cssmin": "^0.4.3",
     "gulp": "^4.0.2",

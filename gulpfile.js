@@ -9,7 +9,7 @@ let gulp = require('gulp'),
     cssmin = require('gulp-cssmin');
 
 gulp.task('stylus', function () {
-  return gulp.src('app/stylus/style.styl')
+  return gulp.src('app/stylus/*.styl')
     .pipe(stylus({compress: true}))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer({
@@ -34,11 +34,12 @@ gulp.task('script', function(){
     'node_modules/jquery/dist/jquery.js',
     'node_modules/lottie-web/build/player/lottie.min.js',
     'node_modules/micromodal/dist/micromodal.min.js',
-    'node_modules/wow.js/dist/wow.min.js'
+    'node_modules/wow.js/dist/wow.min.js',
+    'node_modules/@bijection/smoke/smoke.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('app/js'))
+      .pipe(gulp.dest('app/scripts'))
 });
 
 gulp.task('html', function(){
@@ -54,7 +55,7 @@ gulp.task('pug', function(){
 });
 
 gulp.task('js', function(){
-  return gulp.src('app/js/*.js')
+  return gulp.src('app/scripts/*.js')
     .pipe(browserSync.reload({stream: true}))
 });
 
