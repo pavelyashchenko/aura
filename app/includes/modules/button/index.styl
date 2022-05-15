@@ -1,0 +1,52 @@
+.green-button
+  display inline-flex
+  align-items center
+  font-weight 500
+  font-size 14px
+  line-height 1.5
+  padding 1.6rem 2.3rem
+  background-color $greenBtn
+  box-shadow 0px 2px 0px #006C65, 0px 8px 40px rgba(0, 169, 156, 0.1)
+  border-radius 16px
+  transition all .1s
+  color $white !important
+
+  &:hover
+    background-color $greenBtnHover
+
+  &:active
+    box-shadow none
+    transform translateY(2px)
+
+  svg
+    margin-right 1.4rem
+
+.intro__invest
+  .invest-button
+    display inline-flex
+    align-items center
+    font-weight 500
+    font-size 14px
+    line-height 1.5
+    padding 1.2rem 2.3rem
+    background-color transparent
+    box-shadow none
+    border 1px solid $orange
+    color $orange
+
+    svg
+      margin-left 1.2rem
+      margin-right 0
+
+    &:hover
+      background-color $orange
+      color $white
+
+      svg
+        margin-left 1.2rem
+
+        path
+          fill $white
+
+    &:active
+      transform none

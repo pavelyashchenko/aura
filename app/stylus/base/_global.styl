@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap')
+
+$font = 'Lato', sans-serif
+
+html
+  box-sizing border-box
+  font-size 62.5% // 1rem =10px; 10px/16px = 62.5%
+
+  @media (max-width 1024px)
+    font-size 50% // 1rem =8px; 8px/16px = 50%
+
+  @media (max-width 768px)
+    font-size 40% // 1rem = 6.4; 6.4px/16px = 40%
+*,
+*::before,
+*::after
+  box-sizing inherit
+  padding 0
+  margin 0
+
+body
+  font-family $font
+  font-weight 400
+  background-color $bg
+  color $white
+
+a
+  display inline-block
+  text-decoration none
+  color $link
+  outline none
+
+  &:focus-visible
+    outline solid
+  
+p,
+span,
+ul,
+ol,
+li,
+input,
+textarea
+  font-family $font
+
+ul,
+li,
+ol
+  list-style none
+  padding 0
+  margin 0
+
+h1,
+h2,
+h3,
+h4
+  font-weight 500
+  margin 0
+  padding 0
+  color $title
+
+h1
+  font-size 6.4rem
+
+h2
+  font-size 4.8rem
+
+h3
+  font-size 2rem
+
+h4
+  font-size 1.6rem
+
+button
+  border none
+  outline none
+  cursor pointer
+  background-color transparent
+  color $white
+
+  &:focus-visible
+    outline solid
