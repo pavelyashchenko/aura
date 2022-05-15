@@ -1,0 +1,57 @@
+.header
+  position fixed
+  left 0
+  right 0
+  padding-top 40px
+
+.header__inner
+  display flex
+  align-items center
+  justify-content space-between
+  padding 0 15px
+  max-width 1255px
+  margin 0 auto
+
+.header__left,
+.header__right
+  display flex
+  align-items center
+
+.header__logo
+  margin-right 4.5rem
+
+.header__menu
+  &-ul
+    display flex
+    align-items center
+    position relative
+
+    &::before
+      position absolute
+      left -5px
+      content ""
+      height 100%
+      width 1px
+      background-color $text
+
+  &-li
+    padding 0 2.3rem
+  
+  &-link
+    padding 1.5rem 0 1.7rem
+    color $white
+    font-size 1.6rem
+    line-height 1.9rem
+
+.header__button
+  margin-right 4.7rem
+
+.header__icons
+  &-item
+    transition all .3s
+
+    &:not(:first-child)
+      margin-left 1.5rem
+
+    &:hover
+      transform scale(1.2)

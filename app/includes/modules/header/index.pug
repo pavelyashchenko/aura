@@ -1,0 +1,33 @@
+mixin header()
+  header.header
+    .header__inner
+      .header__left
+        a.header__logo(href="#")
+          img(src= "img/icons/logo.svg", alt="Logo")
+
+        nav.header__menu
+          ul.header__menu-ul
+            each link in ["About us", "Benefits", "Roadmap", "FAQ"]
+              li.header__menu-li
+                a.header__menu-link.link-underline(href="#")= link
+
+      .header__right
+        .header__button
+          if headerButton === "landing"
+            +button(href="#")
+              | Connect wallet
+
+          if headerButton === "cabinet"
+            +button(href="#")
+              | Back to Lobby
+
+        .header__icons
+          a.header__icons-item(href="#")
+            img(src="img/icons/twitter.svg", alt="Twitter")
+          a.header__icons-item(href="#")
+            img(src="img/icons/facebook.svg", alt="Facebook")
+          a.header__icons-item(href="#")
+            img(src="img/icons/discord.svg", alt="Discord")
+          a.header__icons-item(href="#")
+            img(src="img/icons/post.svg", alt="Post")
+        

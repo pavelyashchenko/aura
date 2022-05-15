@@ -1,7 +1,11 @@
+include ../includes/modules/header/index
+include ../includes/modules/button/index
+
 doctype html
 html(lang="en")
   head
     - var title
+          headerButton
 
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -14,6 +18,9 @@ html(lang="en")
     block styles
 
   body
-    block main
+    +header()
+
+    main.main(role="main" id="main-content")
+      block main
 
     block scripts
