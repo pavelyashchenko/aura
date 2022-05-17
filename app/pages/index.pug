@@ -3,6 +3,7 @@ extends ../includes/page
 include ../includes/modules/price-blocks/index
 include ../includes/modules/benefits-blocks/index
 include ../includes/modules/roadmap/index
+include ../includes/modules/accordion/index
 
 block head
   - var title = "Aura Landing"
@@ -15,6 +16,7 @@ block styles
 block scripts 
   script(src="scripts/libs.min.js")
   script(src="scripts/main.js")
+  script(src="scripts/landing.js" type="module")
 
 block main
   section.intro
@@ -191,30 +193,35 @@ block main
       +roadmap({
         list: [
           {
+            animation: "fadeInRight",
             side: "left",
             title: "Prototyping",
             text: "When we’re done with the idea, we move towards to prototyping. At this step, we implement all your instructions and requirements to the product prototype. You’ll see in detail how everything will look like when the product is released.",
             number: "1"
           },
           {
+            animation: "fadeInLeft",
             side: "right",
             title: "Discovery",
             text: "We understand that every business is unique, and so are its needs. The discovery stage is where your needs and requirements are articulated. Then our professional team begins the research process, deep site analysis.",
             number: "2"
           },
           {
+            animation: "fadeInRight",
             side: "left",
             title: "Strategy",
             text: "We begin the design process with well-thought-out strategic planning. Our specialist will define your specific business objectives, organize the content so that to meet the needs of your potential clients, visitors, or buyers",
             number: "3"
           },
           {
+            animation: "fadeInLeft",
             side: "right",
             title: "Launching",
             text: "This is the final stage of the website design process. Once you are satisfied with the approved design, we start testing it for possible bugs. We check your website on its features, test it internally and on various devices and browsers to make sure nothing’s been missed.",
             number: "4"
           },
           {
+            animation: "fadeInRight",
             side: "left",
             title: "Production",
             text: "Our expert designers work with you to get the right picture of your new website and to consider all the wishes and requirements. This process includes diverse approvals, tests, reviews, and close communication.",
@@ -222,3 +229,24 @@ block main
           }
         ]
       })
+
+  section.faq
+    .faq__inner
+      h2.faq__title.section-title FAQ
+
+      +accordion()
+        +accordion-item("<h3>How can I make the order?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>What if I don’t know what plan I need?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>What payment options do you provide for clients?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>Do you have a money back guarantee?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>How can I change my plan?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>Can I get video consultation with your specialist?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+      
+      +button(href="#")
+        | Learn more
