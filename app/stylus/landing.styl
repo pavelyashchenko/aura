@@ -3,6 +3,9 @@
 @import "../includes/modules/header/index.styl"
 @import "../includes/modules/button/index.styl"
 @import "../includes/modules/pictures/index.styl"
+@import "../includes/modules/price-blocks/index.styl"
+@import "../includes/modules/benefits-blocks/index.styl"
+@import "../includes/modules/roadmap/index.styl"
 
 .intro
   position relative
@@ -19,7 +22,7 @@
     background-position center
     background-size cover
     z-index -1
-    opacity .4
+    opacity 0.4
 
 .intro__inner
   position relative
@@ -43,7 +46,7 @@
     background-position left
     background-size contain
     z-index -1
-    opacity .4
+    opacity 0.4
 
   &::after
     position absolute
@@ -57,7 +60,7 @@
     background-repeat no-repeat
     background-position center
     background-size contain
-    opacity .5
+    opacity 0.5
 
 .intro__info
   max-width 526px
@@ -81,7 +84,7 @@
     max-width 650px
     max-height 680px
     height 100%
-    opacity .5
+    opacity 0.5
 
   &::before
     position absolute
@@ -96,7 +99,7 @@
     background-position -3px 40%
     background-size contain
     z-index -1
-    opacity .5
+    opacity 0.5
 
   img
     max-width 658px
@@ -146,18 +149,18 @@
   &::after
     right -30.9%
     background-image url("../img/second/polygon-right.svg")
-  
+
 .results__container
   padding 12px 47px 35px
   text-align center
   background linear-gradient(2.29deg, rgba(0, 200, 160, 0.2) 6.98%, rgba(70, 181, 152, 0.0860465) 53.32%, rgba(33, 67, 60, 0) 97.76%)
-  clip-path polygon(9% 0,90% 0,100% 22%,100% 77%,90% 100%,9% 100%,0 80%,0 20%)
+  clip-path polygon(9% 0, 90% 0, 100% 22%, 100% 77%, 90% 100%, 9% 100%, 0 80%, 0 20%)
 
 .results__title
   font-weight 300
   font-size 3rem
   line-height 3.6rem
-  opacity .8
+  opacity 0.8
   margin-bottom 2.6rem
 
 .results__wrapper
@@ -167,7 +170,7 @@
 
 .results__block
   padding 2.2rem 1.7rem 3.1rem
-  clip-path polygon(20% 0,80% 0,100% 20%,100% 80%,80% 100%,20% 100%,0 80%,0 20%)
+  clip-path polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 20%)
   background linear-gradient(0.77deg, rgba(0, 200, 160, 0.7) 1.41%, rgba(70, 181, 152, 0.301163) 51.39%, rgba(35, 57, 53, 0.231) 99.33%)
   max-width 218px
   width 100%
@@ -216,7 +219,6 @@
     max-width 178px
     height 5px
     background-image url("../img/third/dots.svg")
-
 
 .pass__inner
   display flex
@@ -278,6 +280,7 @@
 
 .how-it-works
   position relative
+  margin-bottom 23rem
 
   &::before
     position absolute
@@ -292,7 +295,6 @@
     background-position center
     background-size cover
     z-index -1
-
 
 .how-it-works__inner
   position relative
@@ -393,7 +395,7 @@
       &::before,
       &::after
         position absolute
-        top 50% 
+        top 50%
         transform translate(-50%, 0)
         content ""
         width 100%
@@ -454,3 +456,136 @@
         &::before,
         &::after
           content none
+
+.levels
+  margin-bottom 16rem
+
+.levels__inner
+  max-width 1112px
+  margin 0 auto
+  padding 0 15px
+  text-align center
+
+.levels__title
+  max-width 110px
+  margin 0 auto 2.5rem
+
+.levels__message
+  font-weight 300
+  font-size 2.4rem
+  line-height 2.9rem
+  opacity 0.8
+  margin-bottom 7rem
+
+.benefits
+  margin-bottom 17rem
+
+.benefits__inner
+  position relative
+  max-width 1073px
+  margin 0 auto
+  padding 0 15px
+  text-align center
+
+  &::before,
+  &::after
+    position absolute
+    top -40px
+    content ""
+    width 100%
+    max-width 530px
+    height 612px
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+  &::before
+    left -110px
+    background-image url("../img/sixth/lines-left.svg")
+
+  &::after
+    right -110px
+    background-image url("../img/sixth/lines-right.svg")
+
+.benefits__title
+  max-width 207px
+  margin 0 auto
+  margin-bottom 6rem
+
+.about
+  position relative
+  padding-top 10vw
+  padding-bottom 20vw
+  background-image url("../img/seventh/about-bg.webp")
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+
+.about__inner
+  position relative
+  max-width 1095px
+  padding 0 15px
+  margin 0 auto
+
+  &::before
+    position absolute
+    bottom -230px
+    left 50%
+    transform translate(-50%, 0)
+    content ""
+    width 100%
+    max-width 42px
+    height 178px
+    background-image url("../img/seventh/elements-center.svg")
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+.about__info
+  position relative
+  max-width 546px
+  text-align center
+
+  &::before
+    position absolute
+    top -120px
+    left -220px
+    content ""
+    width 100%
+    max-width 567px
+    height 574px
+    background-image url("../img/seventh/about-lines.svg")
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+.about__title
+  max-width 227px
+  margin 0 auto 20px
+
+.about__message
+  font-weight 300
+  font-size 2rem
+  line-height 2.4rem
+  margin-bottom 32px
+  text-align left
+
+.about__img
+  position absolute
+  top -110px
+  right 0
+  height 100%
+  z-index -1
+
+  img
+    max-width 100%
+
+.roadmap__inner
+  max-width 1000px
+  padding 0 15px
+  margin 0 auto
+
+.roadmap__title
+  text-align center
+  max-width 220px
+  margin 0 auto 6.5rem

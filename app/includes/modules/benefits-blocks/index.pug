@@ -1,0 +1,12 @@
+mixin benefits-block(data)
+  -
+    const blocks = data.list || [];
+
+  .benefits__blocks
+    each block in blocks
+      .benefits__blocks-wrapper
+        img(src=`${block.iconSrc}`, alt=`${block.iconSrc}`)
+        h3.benefits__blocks-title= block.title
+        p.benefits__blocks-text= block.text
+        +button(href="#")
+          | Learn more

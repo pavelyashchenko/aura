@@ -1,0 +1,14 @@
+mixin roadmap(data)
+  -
+    const blocks = data.list || [];
+
+  .roadmap__blocks
+    each block in blocks
+      .roadmap__blocks-wrapper(class=`roadmap--${block.side}`)
+        .roadmap__blocks-left 
+          h3.roadmap__blocks-title= block.title
+          p.roadmap__blocks-text= block.text
+
+        .roadmap__blocks-right
+          .roadmap__blocks-number
+            span= block.number
