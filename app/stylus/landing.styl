@@ -1,12 +1,9 @@
-@import "base/_vars"
 @import "base/_global"
-@import "../includes/modules/header/index.styl"
-@import "../includes/modules/button/index.styl"
-@import "../includes/modules/pictures/index.styl"
 @import "../includes/modules/price-blocks/index.styl"
 @import "../includes/modules/benefits-blocks/index.styl"
 @import "../includes/modules/roadmap/index.styl"
 @import "../includes/modules/accordion/index.styl"
+@import "../includes/modules/team-members/index.styl"
 
 .intro
   position relative
@@ -38,7 +35,7 @@
     position absolute
     content ""
     top -50px
-    left -21%
+    left -30%
     width 100%
     max-width 650px
     height 100%
@@ -596,7 +593,7 @@
 
 .faq
   position relative
-  margin-bottom 15rem
+  margin-bottom 17rem
 
   &::before,
   &::after
@@ -632,4 +629,43 @@
 
 .faq__title
   max-width 90px
+  margin 0 auto 5rem
+
+.team
+  position relative
+  padding-bottom 21rem
+  overflow hidden
+
+  &::before,
+  &::after
+    position absolute
+    content ""
+    width 100%
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+  &::before
+    bottom -1400px
+    right 0
+    max-width 1246px
+    height 2461px
+    background-image url("../img/tenth/team-bg.webp")
+
+  &::after
+    bottom -240px
+    left 50%
+    transform translateX(-50%)
+    max-width 1312px
+    height 1327px
+    background-image url("../img/tenth/team-lines-bg.svg")
+
+.team__inner
+  text-align center
+  max-width 943px
+  padding 0 15px
+  margin 0 auto
+
+.team__title
+  max-width 213px
   margin 0 auto 5rem

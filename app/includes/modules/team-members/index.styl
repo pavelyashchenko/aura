@@ -1,0 +1,53 @@
+.team__members
+  display flex
+  align-items flex-start
+  justify-content space-between
+
+.team__members-wrapper
+  position relative
+  max-width 275px
+  width 100%
+  
+  &:not(:first-child)
+    margin-left 3rem
+
+  &::before
+    position absolute
+    top -23px
+    left 19px
+    content ""
+    width 100%
+    max-width 272px
+    height 272px
+    background-image url("../img/tenth/team-lines.svg")
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+.team__members-image
+  display flex
+  align-items center
+  justify-content space-between
+  width 100%
+  max-width 200px
+  height 222px
+  margin 0 auto
+  background rgba(135, 217, 206, 0.05)
+  clip-path polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  margin-bottom 5rem
+
+.team__members-image img
+  width 200px
+  height 222px
+  object-fit cover
+
+.team__members-name
+  font-weight 400
+  font-size 2.3rem
+  line-height 3rem
+  margin-bottom 1rem
+
+.team__members-position
+  font-weight 300
+  font-size 1.4rem
+  line-height 1.9rem

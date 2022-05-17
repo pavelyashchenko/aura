@@ -4,6 +4,7 @@ include ../includes/modules/price-blocks/index
 include ../includes/modules/benefits-blocks/index
 include ../includes/modules/roadmap/index
 include ../includes/modules/accordion/index
+include ../includes/modules/team-members/index
 
 block head
   - var title = "Aura Landing"
@@ -16,7 +17,7 @@ block styles
 block scripts 
   script(src="scripts/libs.min.js")
   script(src="scripts/main.js")
-  script(src="scripts/landing.js" type="module")
+  script(src="scripts/landing.js")
 
 block main
   section.intro
@@ -250,3 +251,27 @@ block main
       
       +button(href="#")
         | Learn more
+
+  section.team
+    .team__inner
+      h2.team__title.section-title Our Team
+
+      +team-members({
+        list: [
+          {
+            imageSrc: "https://images.ctfassets.net/hrltx12pl8hq/31f9j3A3xKasyUMMsuIQO8/6a8708add4cb4505b65b1cee3f2e6996/9db2e04eb42b427f4968ab41009443b906e4eabf-people_men-min.jpg?fit=fill&w=368&h=207",
+            name: "Andrew Shimmer",
+            position: "CEO | 5 years of experience"
+          },
+          {
+            imageSrc: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            name: "Ann Maisner",
+            position: "Marketing Director | 5 years of experience"
+          },
+          {
+            imageSrc: "https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80",
+            name: "Tomas Abbar",
+            position: "Product Manager | 5 years of experience"
+          }
+        ]
+      })
