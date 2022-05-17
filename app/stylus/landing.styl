@@ -582,7 +582,7 @@
     max-width 100%
 
 .roadmap
-  margin-bottom 15rem
+  margin-bottom 45rem
 
 .roadmap__inner
   max-width 1000px
@@ -595,7 +595,34 @@
   margin 0 auto 6.5rem
 
 .faq
+  position relative
   margin-bottom 15rem
+
+  &::before,
+  &::after
+    position absolute
+    content ""
+    width 100%
+    background-repeat no-repeat
+    background-position center top
+    background-size contain
+    z-index -1
+
+  &::before
+    top -240px
+    left 50%
+    transform translateX(-50%)
+    max-width 1120px
+    height 1292px
+    background-image url("../img/nineth/faq-lines.svg")
+
+  &::after
+    top -2300px
+    left 0
+    max-width 1154px
+    height 3018px
+    background-image url("../img/nineth/faq-green.webp")
+
 
 .faq__inner
   text-align center
