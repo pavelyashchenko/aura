@@ -20,7 +20,7 @@ block scripts
   script(src="scripts/landing.js")
 
 block main
-  section.intro
+  section.intro#intro
     .intro__inner.wow.fadeInLeft
       .intro__info
         h1.intro__title Aura Bank
@@ -41,7 +41,7 @@ block main
             }
         })
 
-  section.results
+  section.results#results
     .results__inner
       .results__container
         h3.results__title Our Results in Numbers
@@ -51,7 +51,7 @@ block main
               h5.results__block-title= key
               p.results__block-numbers= val
 
-  section.pass
+  section.pass#pass
     .pass__inner
       .pass__info
         h2.pass__title.section-title AURA Pass
@@ -73,7 +73,7 @@ block main
             }
         })
 
-  section.how-it-works
+  section.how-it-works#how-it-works
     .how-it-works__inner
       h2.how-it-works__title.section-title How it works
       p.how-it-works__message
@@ -100,7 +100,7 @@ block main
       p.how-it-works__message
         | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
 
-  section.levels
+  section.levels#levels
     .levels__inner
       h2.levels__title.section-title Levels
       p.levels__message
@@ -136,7 +136,7 @@ block main
         ]
       })
 
-  section.benefits
+  section.benefits#benefits
     .benefits__inner
       h2.benefits__title.section-title Benefits
 
@@ -165,7 +165,7 @@ block main
         ]
       })
 
-  section.about
+  section.about#about
     .about__inner 
       .about__info
         h2.about__title.section-title About AURA
@@ -188,7 +188,7 @@ block main
           }
       })
 
-  section.roadmap
+  section.roadmap#roadmap
     .roadmap__inner 
       h2.roadmap__title.section-title Roadmap
       +roadmap({
@@ -231,7 +231,7 @@ block main
         ]
       })
 
-  section.faq
+  section.faq#faq
     .faq__inner
       h2.faq__title.section-title FAQ
 
@@ -252,7 +252,7 @@ block main
       +button(href="#")
         | Learn more
 
-  section.team
+  section.team#team
     .team__inner
       h2.team__title.section-title Our Team
 
