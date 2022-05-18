@@ -1,0 +1,44 @@
+mixin footer()
+  footer.footer
+    .footer__inner
+      .footer__left 
+        a.footer__logo(href="#")
+          img(src="img/icons/logo.svg", alt="Logo footer")
+        p.footer__info
+          | Smart and fast product to help you meet your clients' needs.
+        .footer__icons
+          each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-facebook.svg': 'Facebook', 'img/icons/footer-discord.svg': 'Discord', 'img/icons/footer-post.svg': 'Post'}
+            a.footer__icons-item(href="#")
+              img(src=value, alt=key)
+
+      .footer__right 
+        nav.footer__menu
+          ul.footer__menu-ul
+            li.footer__menu-title
+              h5 Product
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Solutions
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Features  
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Pricing
+          ul.footer__menu-ul
+            li.footer__menu-title
+              h5 Company
+          ul.footer__menu-ul
+            li.footer__menu-title
+              h5 Support
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Help
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Center
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Developers
+          ul.footer__menu-ul
+            li.footer__menu-title
+              h5 Legal
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Terms & Conditions
+            li.footer__menu-li
+              a.footer__menu-link(href="#") Privacy policy
+          

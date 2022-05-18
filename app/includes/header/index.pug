@@ -22,12 +22,7 @@ mixin header()
               | Back to Lobby
 
         .header__icons
-          a.header__icons-item(href="#")
-            img(src="img/icons/twitter.svg", alt="Twitter")
-          a.header__icons-item(href="#")
-            img(src="img/icons/facebook.svg", alt="Facebook")
-          a.header__icons-item(href="#")
-            img(src="img/icons/discord.svg", alt="Discord")
-          a.header__icons-item(href="#")
-            img(src="img/icons/post.svg", alt="Post")
+          each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/facebook.svg': 'Facebook', 'img/icons/discord.svg': 'Discord', 'img/icons/post.svg': 'Post'}
+            a.header__icons-item(href="#")
+              img(src=value, alt=key)
         

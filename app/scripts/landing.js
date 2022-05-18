@@ -1,18 +1,5 @@
-(function () {
-  // Smoke animation
-  var canvas = document.getElementById('canvas')
-  var ctx = canvas.getContext('2d')
-  canvas.width = innerWidth
-  canvas.height = innerHeight
-
-  var party = smokemachine(ctx, [4, 192, 172])
-  party.start() // start animating
-  party.setPreDrawCallback(function(dt){
-    party.addSmoke(innerWidth/2, innerHeight, 1)
-  })
-
-
-  // Accordion tabs
+// Accordion tabs
+const Accordion = () => {
   const panelTitle = $(".accordion__title");
   const visibilityMode = "single";
   const isInitialized = "init";
@@ -96,8 +83,8 @@
   } else {
     $(panelTitle).unbind("click");
   }
+}
 
-  // $(".accordion__title").on("click", function(){
-  //   $(this).parent().toggleClass("is-active");
-  // })
+(function() {
+  Accordion();
 })();

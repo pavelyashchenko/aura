@@ -1,4 +1,5 @@
-include ../includes/modules/header/index
+include ../includes/header/index
+include ../includes/footer/index
 include ../includes/modules/button/index
 include ../includes/modules/pictures/index
 
@@ -23,5 +24,7 @@ html(lang="en")
 
     main.main#main-content
       block main
+
+    +footer()
 
     block scripts
