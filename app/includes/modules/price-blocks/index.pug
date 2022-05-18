@@ -4,7 +4,7 @@ mixin price-block(data)
 
   .levels__blocks
     each block in blocks
-      .levels__blocks-wrapper
+      .levels__blocks-wrapper.wow(class=`${block.animation}` data-wow-delay="1.5s")
         .levels__blocks-wrapper-inner
           .levels__blocks-level
             span= block.level

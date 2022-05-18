@@ -40,7 +40,7 @@ block main
             }
         })
 
-  section.results#results
+  section.results#results.wow.fadeInDown(data-wow-delay="1s")
     .results__inner
       .results__container
         h3.results__title Our Results in Numbers
@@ -52,7 +52,7 @@ block main
 
   section.pass#pass
     .pass__inner
-      .pass__info
+      .pass__info.wow.fadeInLeft(data-wow-delay=".5s")
         h2.pass__title.section-title AURA Pass
         p.pass__message
           | Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut&nbsp;labore et&nbsp;dolore magnam aliquam quaerat voluptatem. Ut&nbsp;enim ad&nbsp;minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut&nbsp;aliquid ex&nbsp;ea&nbsp;commodi consequatur? Quis autem vel eum iure reprehenderit qui in&nbsp;ea&nbsp;voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
@@ -65,41 +65,41 @@ block main
           path: "img/third/pass-nft.png",
           attr: { "alt": "NFT image" },
           mainAttr: {
-            "class": "wow fadeIn",
+            "class": "wow fadeInRight",
             "data-wow-duration": "2s",
             "data-wow-offset": "10",
-            "data-wow-delay": ".1s"
+            "data-wow-delay": ".5s"
             }
         })
 
-  section.how-it-works#how-it-works
+  section.how-it-works#how-it-works.wow.fadeInDown(data-wow-delay=".5s")
     .how-it-works__inner
-      h2.how-it-works__title.section-title How it works
-      p.how-it-works__message
+      h2.how-it-works__title.section-title.wow.fadeInDown(data-wow-delay=".7s") How it works
+      p.how-it-works__message.wow.fadeInDown(data-wow-delay=".8s")
         | The client buys NFTs of&nbsp;different levels. Each level has its own price.<br> After purchasing the NFT, the client must qualify (bring 2&nbsp;referrals) to&nbsp;join the queue. The queue can also be&nbsp;purchased for the customer level NFT cost. By&nbsp;bringing 2&nbsp;referrals, the client receives back 100% of&nbsp;the cost of&nbsp;NFT.
 
-      .how-it-works__main.how-it-works__main--desktop
-        .number__bank
+      .how-it-works__main
+        .number__bank.wow.fadeInLeft(data-wow-delay="1s")
           span Bank
-        .number__single.first__single
+        .number__single.first__single.wow.fadeInDown(data-wow-delay="1.2s")
           span 1
-        .number__double
-          .number__single 
+        .number__double.wow.fadeInDown(data-wow-delay="1.4s")
+          .number__single.wow.fadeInUp(data-wow-delay="1.6s")
             span 2
-          .number__single 
+          .number__single.wow.fadeInDown(data-wow-delay="1.8s")
             span 3
-        .number__single 
+        .number__single.wow.fadeInUp(data-wow-delay="2s")
           span 1
-        .number__double
-          .number__single 
+        .number__double.wow.fadeInUp(data-wow-delay="2.2s")
+          .number__single.wow.fadeInDown(data-wow-delay="2.5s")
             span 4
-          .number__single 
+          .number__single.wow.fadeInUp(data-wow-delay="2.7s")
             span 5
 
-      p.how-it-works__message
+      p.how-it-works__message.wow.fadeInDown(data-wow-delay="2.9s")
         | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
 
-  section.levels#levels
+  section.levels#levels.wow.fadeInUp(data-wow-delay=".5s")
     .levels__inner
       h2.levels__title.section-title Levels
       p.levels__message
@@ -108,26 +108,31 @@ block main
       +price-block({
         list: [
           {
+            animation: "fadeInLeft",
             level: "1",
             price: "$50",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
+            animation: "fadeInLeft",
             level: "2",
             price: "$100",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
+            animation: "fadeInLeft",
             level: "3",
             price: "$200",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
+            animation: "fadeInLeft",
             level: "4",
             price: "$300",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
+            animation: "fadeInLeft",
             level: "5",
             price: "$400",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
@@ -135,7 +140,7 @@ block main
         ]
       })
 
-  section.benefits#benefits
+  section.benefits#benefits.wow.fadeInDown(data-wow-delay=".5s")
     .benefits__inner
       h2.benefits__title.section-title Benefits
 
@@ -165,7 +170,7 @@ block main
       })
 
   section.about#about
-    .about__inner 
+    .about__inner.wow.fadeInLeft(data-wow-delay="1s")
       .about__info
         h2.about__title.section-title About AURA
         p.about__message
@@ -174,7 +179,7 @@ block main
         p.about__message
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat.
 
-    .about__img
+    .about__img.wow.fadeInRight(data-wow-delay="1s")
       +picture({
         lazy: false,
         path: "img/seventh/about-img.png",
@@ -187,90 +192,90 @@ block main
           }
       })
 
-  //- section.roadmap#roadmap
-  //-   .roadmap__inner 
-  //-     h2.roadmap__title.section-title Roadmap
-  //-     +roadmap({
-  //-       list: [
-  //-         {
-  //-           animation: "fadeInRight",
-  //-           side: "left",
-  //-           title: "Prototyping",
-  //-           text: "When we’re done with the idea, we move towards to prototyping. At this step, we implement all your instructions and requirements to the product prototype. You’ll see in detail how everything will look like when the product is released.",
-  //-           number: "1"
-  //-         },
-  //-         {
-  //-           animation: "fadeInLeft",
-  //-           side: "right",
-  //-           title: "Discovery",
-  //-           text: "We understand that every business is unique, and so are its needs. The discovery stage is where your needs and requirements are articulated. Then our professional team begins the research process, deep site analysis.",
-  //-           number: "2"
-  //-         },
-  //-         {
-  //-           animation: "fadeInRight",
-  //-           side: "left",
-  //-           title: "Strategy",
-  //-           text: "We begin the design process with well-thought-out strategic planning. Our specialist will define your specific business objectives, organize the content so that to meet the needs of your potential clients, visitors, or buyers",
-  //-           number: "3"
-  //-         },
-  //-         {
-  //-           animation: "fadeInLeft",
-  //-           side: "right",
-  //-           title: "Launching",
-  //-           text: "This is the final stage of the website design process. Once you are satisfied with the approved design, we start testing it for possible bugs. We check your website on its features, test it internally and on various devices and browsers to make sure nothing’s been missed.",
-  //-           number: "4"
-  //-         },
-  //-         {
-  //-           animation: "fadeInRight",
-  //-           side: "left",
-  //-           title: "Production",
-  //-           text: "Our expert designers work with you to get the right picture of your new website and to consider all the wishes and requirements. This process includes diverse approvals, tests, reviews, and close communication.",
-  //-           number: "5"
-  //-         }
-  //-       ]
-  //-     })
+  section.roadmap#roadmap
+    .roadmap__inner 
+      h2.roadmap__title.section-title Roadmap
+      +roadmap({
+        list: [
+          {
+            animation: "fadeInRight",
+            side: "left",
+            title: "Prototyping",
+            text: "When we’re done with the idea, we move towards to prototyping. At this step, we implement all your instructions and requirements to the product prototype. You’ll see in detail how everything will look like when the product is released.",
+            number: "1"
+          },
+          {
+            animation: "fadeInLeft",
+            side: "right",
+            title: "Discovery",
+            text: "We understand that every business is unique, and so are its needs. The discovery stage is where your needs and requirements are articulated. Then our professional team begins the research process, deep site analysis.",
+            number: "2"
+          },
+          {
+            animation: "fadeInRight",
+            side: "left",
+            title: "Strategy",
+            text: "We begin the design process with well-thought-out strategic planning. Our specialist will define your specific business objectives, organize the content so that to meet the needs of your potential clients, visitors, or buyers",
+            number: "3"
+          },
+          {
+            animation: "fadeInLeft",
+            side: "right",
+            title: "Launching",
+            text: "This is the final stage of the website design process. Once you are satisfied with the approved design, we start testing it for possible bugs. We check your website on its features, test it internally and on various devices and browsers to make sure nothing’s been missed.",
+            number: "4"
+          },
+          {
+            animation: "fadeInRight",
+            side: "left",
+            title: "Production",
+            text: "Our expert designers work with you to get the right picture of your new website and to consider all the wishes and requirements. This process includes diverse approvals, tests, reviews, and close communication.",
+            number: "5"
+          }
+        ]
+      })
 
-  //- section.faq#faq
-  //-   .faq__inner
-  //-     h2.faq__title.section-title FAQ
+  section.faq#faq.wow.fadeInDown(data-wow-delay=".5s")
+    .faq__inner
+      h2.faq__title.section-title FAQ
 
-  //-     +accordion()
-  //-       +accordion-item("<h3>How can I make the order?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-  //-       +accordion-item("<h3>What if I don’t know what plan I need?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-  //-       +accordion-item("<h3>What payment options do you provide for clients?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-  //-       +accordion-item("<h3>Do you have a money back guarantee?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-  //-       +accordion-item("<h3>How can I change my plan?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-  //-       +accordion-item("<h3>Can I get video consultation with your specialist?</h3>")
-  //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+      +accordion()
+        +accordion-item("<h3>How can I make the order?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>What if I don’t know what plan I need?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>What payment options do you provide for clients?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>Do you have a money back guarantee?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>How can I change my plan?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>Can I get video consultation with your specialist?</h3>")
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
       
-  //-     +button(href="#")
-  //-       | Learn more
+      +button(href="#")
+        | Learn more
 
-  //- section.team#team
-  //-   .team__inner
-  //-     h2.team__title.section-title Our Team
+  section.team#team.wow.fadeInLeft(data-wow-delay=".5s")
+    .team__inner
+      h2.team__title.section-title Our Team
 
-  //-     +team-members({
-  //-       list: [
-  //-         {
-  //-           imageSrc: "https://images.ctfassets.net/hrltx12pl8hq/31f9j3A3xKasyUMMsuIQO8/6a8708add4cb4505b65b1cee3f2e6996/9db2e04eb42b427f4968ab41009443b906e4eabf-people_men-min.jpg?fit=fill&w=368&h=207",
-  //-           name: "Andrew Shimmer",
-  //-           position: "CEO | 5 years of experience"
-  //-         },
-  //-         {
-  //-           imageSrc: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-  //-           name: "Ann Maisner",
-  //-           position: "Marketing Director | 5 years of experience"
-  //-         },
-  //-         {
-  //-           imageSrc: "https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80",
-  //-           name: "Tomas Abbar",
-  //-           position: "Product Manager | 5 years of experience"
-  //-         }
-  //-       ]
-  //-     })
+      +team-members({
+        list: [
+          {
+            imageSrc: "https://images.ctfassets.net/hrltx12pl8hq/31f9j3A3xKasyUMMsuIQO8/6a8708add4cb4505b65b1cee3f2e6996/9db2e04eb42b427f4968ab41009443b906e4eabf-people_men-min.jpg?fit=fill&w=368&h=207",
+            name: "Andrew Shimmer",
+            position: "CEO | 5 years of experience"
+          },
+          {
+            imageSrc: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            name: "Ann Maisner",
+            position: "Marketing Director | 5 years of experience"
+          },
+          {
+            imageSrc: "https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80",
+            name: "Tomas Abbar",
+            position: "Product Manager | 5 years of experience"
+          }
+        ]
+      })
