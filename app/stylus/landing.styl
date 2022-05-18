@@ -424,7 +424,12 @@
   margin-bottom 7rem
 
 .benefits
-  margin-bottom 17rem
+  padding-bottom 17rem
+  padding-top 5rem
+  background-image url("../img/sixth/benefits-lines.svg")
+  background-repeat no-repeat
+  background-size cover
+  background-position center
 
 .benefits__inner
   position relative
@@ -432,26 +437,6 @@
   margin 0 auto
   padding 0 15px
   text-align center
-
-  &::before,
-  &::after
-    position absolute
-    top -40px
-    content ""
-    width 100%
-    max-width 530px
-    height 612px
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
-
-  &::before
-    left -110px
-    background-image url("../img/sixth/lines-left.svg")
-
-  &::after
-    right -110px
-    background-image url("../img/sixth/lines-right.svg")
 
 .benefits__title
   max-width 207px
