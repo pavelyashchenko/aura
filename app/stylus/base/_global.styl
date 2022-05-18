@@ -9,6 +9,7 @@
 $font = 'Lato', sans-serif
 
 html
+  height 100%
   box-sizing border-box
   font-size 62.5% // 1rem =10px; 10px/16px = 62.5%
 
@@ -25,11 +26,17 @@ html
   margin 0
 
 body
+  display flex
+  flex-direction column
+  height 100%
   font-family $font
   font-weight 400
   background-color $bg
   color $white
   overflow-x hidden
+
+main
+  flex 1 0 auto
 
 a
   display inline-block
@@ -91,6 +98,9 @@ button
 
   &:focus-visible
     outline solid
+
+.scroll-block
+  overflow hidden
 
 .link-underline
   position relative

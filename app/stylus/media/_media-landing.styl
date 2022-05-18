@@ -1,0 +1,67 @@
+@media(max-width: 1024px)
+  .header__desktop
+    .header__logo
+      img
+        max-width 100px
+    .header__menu
+      &-li
+        padding 0 1.5rem
+
+      &-link
+        font-size 12px
+
+@media(max-width: 768px)
+  .header__desktop
+    .header__logo
+      margin-right 3rem
+
+        img
+          max-width 80px
+
+    .header__button
+      margin-right 2rem
+    
+  .footer__logo img
+    width 160px
+  
+  .footer__menu
+    &-title
+      h5
+        font-size 16px
+
+    &-link
+      font-size 14px
+  
+  .footer__info
+    font-size 14px
+    line-height 1.5
+
+@media(max-width: 650px)
+  .header__desktop
+    display none
+
+  .header__mobile
+    display flex
+
+  .footer__inner
+    flex-direction column
+
+  .footer__left
+    order 2
+    margin-right 0
+
+  .footer__right
+    margin-bottom 50px
+
+  .footer__logo img
+    width 120px
+
+@media(max-width: 425px)
+  .footer__menu
+    flex-wrap wrap
+    &-ul
+      width 50%
+
+      &:nth-child(-n+2)
+        margin-bottom 40px
+
