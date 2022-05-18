@@ -9,7 +9,6 @@
   "author": "Pavel Yashchenko",
   "license": "ISC",
   "devDependencies": {
-    "@bijection/smoke": "^1.0.2",
     "browser-sync": "^2.26.7",
     "cssmin": "^0.4.3",
     "gulp": "^4.0.2",
@@ -24,6 +23,7 @@
     "lottie-web": "^5.9.4",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
+    "swiper": "^8.1.5",
     "wow.js": "^1.2.2"
   },
   "dependencies": {}

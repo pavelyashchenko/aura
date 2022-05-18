@@ -7,6 +7,7 @@
 
 .intro
   position relative
+  margin-bottom 18rem
 
   &::before
     position absolute
@@ -27,7 +28,7 @@
   display flex
   align-items center
   justify-content space-between
-  max-width 1075px
+  max-width 1250px
   padding 10.5rem 15px 0
   margin 0 auto
 
@@ -62,7 +63,7 @@
 
 .intro__info
   max-width 526px
-  width 100%
+  width 50%
 
 .intro__title
   margin-bottom 5px
@@ -74,79 +75,51 @@
 
 .intro__illustration
   position relative
-  margin-right -120px
+  width 50%
+  background-image url("../img/first/polygon-right.svg")
+  background-repeat no-repeat
+  background-position 85px center
+  background-size 65%
 
-  #canvas
+  &::after
     position absolute
-    top -19.5%
-    max-width 650px
-    max-height 680px
-    height 100%
-    opacity 0.5
-
-  &::before
-    position absolute
+    top 50%
+    right 10px
     content ""
-    top 0
-    left 10%
+    transform translateY(-50%)
     width 100%
-    max-width 562px
+    max-width 5px
     height 100%
-    background-image url("../img/first/elements-right.svg")
+    background-image url("../img/first/lines-right.svg")
     background-repeat no-repeat
-    background-position -3px 40%
+    background-position center
     background-size contain
     z-index -1
-    opacity 0.5
+
+  picture
+    width 100%
+    max-width 562px
 
   img
     max-width 658px
     width 100%
 
 .results
-  position relative
-  overflow-x hidden
-  padding-top 220px
-  margin-top -50px
-
-  &::before
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    content ""
-    width 100%
-    max-width 888px
-    height 280px
-    background-image url("../img/second/polygon-center.svg")
-    background-repeat no-repeat
-    background-size contain
+  background-image url("../img/second/results-bg.svg")
+  background-size auto
+  background-position center
+  background-repeat no-repeat
+  margin-bottom 220px
 
 .results__inner
   position relative
   max-width 888px
-  margin 0 auto 220px
-  padding 0 27px
-
-  &::before,
-  &::after
-    position absolute
-    top -17px
-    content ""
-    width 100%
-    max-width 240px
-    height 280px
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
-
-  &::before
-    left -30.5%
-    background-image url("../img/second/polygon-left.svg")
-
-  &::after
-    right -30.9%
-    background-image url("../img/second/polygon-right.svg")
+  margin 0 auto
+  padding 50px 27px
+  background-image url("../img/second/polygon-center.svg")
+  background-size auto
+  background-position center
+  background-repeat no-repeat
 
 .results__container
   padding 12px 47px 35px
@@ -230,7 +203,8 @@
   position relative
   max-width 500px
   text-align center
-  margin-right 77px
+  margin-right 25px
+  width 50%
 
   &::before
     position absolute
@@ -258,20 +232,14 @@
 
 .pass__img
   position relative
-  margin-right -50px
+  width 50%
+  background-image url("../img/third/polygon-right.svg")
+  background-position 112px 0
+  background-repeat no-repeat
+  background-size contain
 
-  &::before
-    position absolute
-    top -100px
-    right -80px
-    content ""
+  picture
     width 100%
-    max-width 559px
-    height 571px
-    background-image url("../img/third/polygon-right.svg")
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
 
   img
     max-width 100%
@@ -279,6 +247,10 @@
 .how-it-works
   position relative
   margin-bottom 23rem
+  background-image url("../img/fourth/how-it-works-lines.svg")
+  background-repeat no-repeat
+  background-position center
+  background-size contain
 
   &::before
     position absolute
@@ -299,30 +271,6 @@
   max-width 938px
   padding 0 15px
   margin 0 auto
-
-  &::before,
-  &::after
-    position absolute
-    content ""
-    width 100%
-    background-repeat no-repeat
-    background-position center
-    background-size cover
-    z-index -1
-
-  &::before
-    top 100px
-    left -170px
-    max-width 569px
-    height 644px
-    background-image url("../img/fourth/lines-left.svg")
-
-  &::after
-    top 0
-    right -170px
-    max-width 609px
-    height 715px
-    background-image url("../img/fourth/lines-right.svg")
 
 .how-it-works__title
   max-width 234px

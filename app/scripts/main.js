@@ -1,11 +1,13 @@
 (function () {
-	$(window).scroll(function(){
-    if ($(this).scrollTop() > 50) {
-      $(".header").addClass("is-fixed")
-    } else {
-      $(".header").removeClass("is-fixed")
-    }
-  });
+  (function fixedHeader() {
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 50) {
+        $(".header__desktop, .header__mobile").addClass("is-fixed")
+      } else {
+        $(".header__desktop, .header__mobile").removeClass("is-fixed")
+      }
+    });
+  })();
 
   (function mobileMenu() {
     $(".header__burger-button").on("click", function() {
@@ -16,6 +18,5 @@
 
 	new WOW().init();
 })();
-//\\//\\//\\//\\ End jQuery //\\//\\//\\//\\
 
 

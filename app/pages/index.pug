@@ -20,120 +20,120 @@ block scripts
   script(src="scripts/landing.js")
 
 block main
-  //- section.intro#intro
-  //-   .intro__inner.wow.fadeInLeft
-  //-     .intro__info
-  //-       h1.intro__title Aura Bank
-  //-       p.intro__message
-  //-         | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
+  section.intro#intro
+    .intro__inner
+      .intro__info.wow.fadeInLeft
+        h1.intro__title Aura Bank
+        p.intro__message
+          | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
 
-  //-     .intro__illustration
-  //-       +picture({
-  //-         lazy: false,
-  //-         path: "img/first/nft-viz.png",
-  //-         attr: { "alt": "NFT" },
-  //-         mainAttr: {
-  //-           "class": "wow fadeIn",
-  //-           "data-wow-duration": "2s",
-  //-           "data-wow-offset": "10",
-  //-           "data-wow-delay": ".1s"
-  //-           }
-  //-       })
+      .intro__illustration.wow.fadeInRight
+        +picture({
+          lazy: false,
+          path: "img/first/nft-viz.png",
+          attr: { "alt": "NFT" },
+          mainAttr: {
+            "class": "wow fadeIn",
+            "data-wow-duration": "2s",
+            "data-wow-offset": "10",
+            "data-wow-delay": ".1s"
+            }
+        })
 
-  //- section.results#results
-  //-   .results__inner
-  //-     .results__container
-  //-       h3.results__title Our Results in Numbers
-  //-       .results__wrapper
-  //-         each val, key in {"Members": "22 880", "Turnover": "567 123", "Transactions": "36 789"}
-  //-           .results__block
-  //-             h5.results__block-title= key
-  //-             p.results__block-numbers= val
+  section.results#results
+    .results__inner
+      .results__container
+        h3.results__title Our Results in Numbers
+        .results__wrapper
+          each val, key in {"Members": "22 880", "Turnover": "567 123", "Transactions": "36 789"}
+            .results__block
+              h5.results__block-title= key
+              p.results__block-numbers= val
 
-  //- section.pass#pass
-  //-   .pass__inner
-  //-     .pass__info
-  //-       h2.pass__title.section-title AURA Pass
-  //-       p.pass__message
-  //-         | Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut&nbsp;labore et&nbsp;dolore magnam aliquam quaerat voluptatem. Ut&nbsp;enim ad&nbsp;minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut&nbsp;aliquid ex&nbsp;ea&nbsp;commodi consequatur? Quis autem vel eum iure reprehenderit qui in&nbsp;ea&nbsp;voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-  //-       +button(href="#")
-  //-         | View on openSea
+  section.pass#pass
+    .pass__inner
+      .pass__info
+        h2.pass__title.section-title AURA Pass
+        p.pass__message
+          | Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut&nbsp;labore et&nbsp;dolore magnam aliquam quaerat voluptatem. Ut&nbsp;enim ad&nbsp;minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut&nbsp;aliquid ex&nbsp;ea&nbsp;commodi consequatur? Quis autem vel eum iure reprehenderit qui in&nbsp;ea&nbsp;voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+        +button(href="#")
+          | View on openSea
 
-  //-     .pass__img
-  //-       +picture({
-  //-         lazy: false,
-  //-         path: "img/third/pass-nft.png",
-  //-         attr: { "alt": "NFT image" },
-  //-         mainAttr: {
-  //-           "class": "wow fadeIn",
-  //-           "data-wow-duration": "2s",
-  //-           "data-wow-offset": "10",
-  //-           "data-wow-delay": ".1s"
-  //-           }
-  //-       })
+      .pass__img
+        +picture({
+          lazy: false,
+          path: "img/third/pass-nft.png",
+          attr: { "alt": "NFT image" },
+          mainAttr: {
+            "class": "wow fadeIn",
+            "data-wow-duration": "2s",
+            "data-wow-offset": "10",
+            "data-wow-delay": ".1s"
+            }
+        })
 
-  //- section.how-it-works#how-it-works
-  //-   .how-it-works__inner
-  //-     h2.how-it-works__title.section-title How it works
-  //-     p.how-it-works__message
-  //-       | The client buys NFTs of&nbsp;different levels. Each level has its own price.<br> After purchasing the NFT, the client must qualify (bring 2&nbsp;referrals) to&nbsp;join the queue. The queue can also be&nbsp;purchased for the customer level NFT cost. By&nbsp;bringing 2&nbsp;referrals, the client receives back 100% of&nbsp;the cost of&nbsp;NFT.
+  section.how-it-works#how-it-works
+    .how-it-works__inner
+      h2.how-it-works__title.section-title How it works
+      p.how-it-works__message
+        | The client buys NFTs of&nbsp;different levels. Each level has its own price.<br> After purchasing the NFT, the client must qualify (bring 2&nbsp;referrals) to&nbsp;join the queue. The queue can also be&nbsp;purchased for the customer level NFT cost. By&nbsp;bringing 2&nbsp;referrals, the client receives back 100% of&nbsp;the cost of&nbsp;NFT.
 
-  //-     .how-it-works__main.how-it-works__main--desktop
-  //-       .number__bank
-  //-         span Bank
-  //-       .number__single.first__single
-  //-         span 1
-  //-       .number__double
-  //-         .number__single 
-  //-           span 2
-  //-         .number__single 
-  //-           span 3
-  //-       .number__single 
-  //-         span 1
-  //-       .number__double
-  //-         .number__single 
-  //-           span 4
-  //-         .number__single 
-  //-           span 5
+      .how-it-works__main.how-it-works__main--desktop
+        .number__bank
+          span Bank
+        .number__single.first__single
+          span 1
+        .number__double
+          .number__single 
+            span 2
+          .number__single 
+            span 3
+        .number__single 
+          span 1
+        .number__double
+          .number__single 
+            span 4
+          .number__single 
+            span 5
 
-  //-     p.how-it-works__message
-  //-       | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
+      p.how-it-works__message
+        | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
 
-  //- section.levels#levels
-  //-   .levels__inner
-  //-     h2.levels__title.section-title Levels
-  //-     p.levels__message
-  //-       | Each level can only be&nbsp;purchased after the previous one, by&nbsp;queue.
+  section.levels#levels
+    .levels__inner
+      h2.levels__title.section-title Levels
+      p.levels__message
+        | Each level can only be&nbsp;purchased after the previous one, by&nbsp;queue.
 
-  //-     +price-block({
-  //-       list: [
-  //-         {
-  //-           level: "1",
-  //-           price: "$50",
-  //-           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  //-         },
-  //-         {
-  //-           level: "2",
-  //-           price: "$100",
-  //-           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  //-         },
-  //-         {
-  //-           level: "3",
-  //-           price: "$200",
-  //-           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  //-         },
-  //-         {
-  //-           level: "4",
-  //-           price: "$300",
-  //-           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  //-         },
-  //-         {
-  //-           level: "5",
-  //-           price: "$400",
-  //-           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-  //-         }
-  //-       ]
-  //-     })
+      +price-block({
+        list: [
+          {
+            level: "1",
+            price: "$50",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+          },
+          {
+            level: "2",
+            price: "$100",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+          },
+          {
+            level: "3",
+            price: "$200",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+          },
+          {
+            level: "4",
+            price: "$300",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+          },
+          {
+            level: "5",
+            price: "$400",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+          }
+        ]
+      })
 
   //- section.benefits#benefits
   //-   .benefits__inner

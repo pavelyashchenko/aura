@@ -9,6 +9,37 @@
 
       &-link
         font-size 12px
+  
+  .intro__illustration
+    width 50%
+    margin-right 0
+
+  .pass
+    &::before
+      top 100%
+
+  .how-it-works__main
+    max-width 710px
+    margin 0 auto 100px
+
+    .number__bank
+      width 100px
+      height 140px
+
+    .number__single
+      width 57px
+      height 66px
+
+      &::before
+        max-width 68px
+        height 68px
+
+    .number__double
+      max-width 155px
+
+      .number__single
+        width 57px
+        height 66px
 
 @media(max-width: 768px)
   .header__desktop
@@ -20,6 +51,12 @@
 
     .header__button
       margin-right 2rem
+
+    .header__icons
+      &-item
+        img
+          width 20px
+          height 20px
     
   .footer__logo img
     width 160px
@@ -35,6 +72,86 @@
   .footer__info
     font-size 14px
     line-height 1.5
+
+  .results__inner
+    background-size contain
+
+  .pass
+    &::before
+      top 250%
+
+  .pass__message
+    font-size 14px
+    line-height 1.3
+
+  .how-it-works__main
+    flex-direction column
+
+    .number__bank
+      width 150px
+      height 190px
+      transform rotate(32deg)
+      margin-bottom 30px
+
+      span
+        transform rotate(-32deg)
+        font-size 4rem
+
+    .number__single
+      margin-bottom 35px
+      width 77px
+      height 86px
+      margin-bottom 65px
+
+      &::before
+        max-width 89px
+        height 98px
+
+      span
+        font-size 4rem
+
+        &::before
+          transform rotate(90deg)
+          top -24px
+          left 30px
+        
+        &::after
+          transform rotate(90deg)
+          bottom -27px
+          left 30px
+          top auto
+          right auto
+
+    .number__double
+      flex-direction column
+
+      &::before
+        background-image url("../img/fourth/double-green-mobile.svg")
+        height 209px
+        top 0
+        left 40px
+
+      &::after
+        background-image url("../img/fourth/double-lines-mobile.svg")
+        height 212px
+        top 0
+        left 40px
+
+      .number__single
+        width 77px
+        height 86px
+        
+        &:not(:last-child)
+          margin-bottom 35px
+
+  .how-it-works__message
+    font-size 14px
+    line-height 1.4
+
+
+  .button
+    font-size 14px
+    padding 2rem 3rem
 
 @media(max-width: 650px)
   .header__desktop
@@ -56,6 +173,67 @@
   .footer__logo img
     width 120px
 
+  .intro
+    margin-bottom 100px
+
+  .intro__inner
+    flex-direction column
+
+    &::before,
+    &::after
+      content none
+
+  .intro__info
+    width 100%
+    order 2
+
+  .intro__illustration
+    width 80%
+    order 1
+    
+    &::after
+      content none
+
+  .results
+    margin-bottom 150px
+
+  .results__inner
+    background-image url("../img/second/polygon-center-mobile.svg")
+    padding 30px 27px 17px
+
+  .results__container
+    max-width 256px
+    margin 0 auto
+    background-image url("../img/second/results-container.svg")
+    background-position center
+    background-size contain
+    background-repeat no-repeat
+    padding 0 39px 31px 39px
+    clip-path none
+    
+
+  .results__wrapper
+    flex-direction column
+
+  .results__block
+    &:not(:first-child)
+      margin-left 0
+      margin-top 30px
+
+  .pass__inner
+    flex-direction column
+
+  .pass__info
+    margin-right 0
+    width 100%
+    margin-bottom 60px
+
+  .pass__img
+    width 100%
+
+    picture
+      width 79%
+
 @media(max-width: 425px)
   .footer__menu
     flex-wrap wrap
@@ -64,4 +242,7 @@
 
       &:nth-child(-n+2)
         margin-bottom 40px
+
+  .intro__illustration
+    width 100%
 
