@@ -94,6 +94,19 @@ const grayArow = () => {
     autoplay: true,
     path: 'scripts/animations/gray-line.json'
   })
+
+  let startAnim = function () {
+      $(".span1").delay(5000).animate({
+          "opacity": "1"
+      }, 2000, resetAnim)
+  }
+  let resetAnim = function () {
+      $(".span1").delay(1000).animate({
+          "opacity": "0"
+      }, 2000)
+      startAnim();
+  }
+  startAnim()
 }
 
 const greenArrow = () => {
@@ -104,6 +117,19 @@ const greenArrow = () => {
     autoplay: true,
     path: 'scripts/animations/green-line.json'
   })
+
+  let startAnim = function () {
+    $(".span2").delay(1200).animate({
+        "opacity": "1"
+    }, 2000, resetAnim)
+  }
+  let resetAnim = function () {
+      $(".span2").delay(4500).animate({
+          "opacity": "0"
+      }, 2000)
+      startAnim();
+  }
+  startAnim()
 }
 
 const yellowArrowFirst = () => {
@@ -114,6 +140,19 @@ const yellowArrowFirst = () => {
     autoplay: true,
     path: 'scripts/animations/yellow-line1.json'
   })
+
+  let startAnim = function () {
+    $(".span3").delay(400).animate({
+        "opacity": "1"
+    }, 2000, resetAnim)
+  }
+  let resetAnim = function () {
+      $(".span3").delay(5000).animate({
+          "opacity": "0"
+      }, 2000)
+      startAnim();
+  }
+  startAnim()
 }
 
 const yellowArrowSecond = () => {
@@ -124,6 +163,19 @@ const yellowArrowSecond = () => {
     autoplay: true,
     path: 'scripts/animations/yellow-line2.json'
   })
+
+  let startAnim = function () {
+    $(".span4").delay(3000).animate({
+        "opacity": "1"
+    }, 2000, resetAnim)
+  }
+  let resetAnim = function () {
+      $(".span4").delay(3000).animate({
+          "opacity": "0"
+      }, 2000)
+      startAnim();
+  }
+  startAnim()
 }
 
 
