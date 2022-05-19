@@ -1,0 +1,150 @@
+extends ../includes/page
+
+include ../includes/modules/cabinet/slider-blocks/index
+
+block head
+  - var title = "Aura Own Cabinet"
+  - var headerButton = "cabinet"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/cabinet.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+  script(src="scripts/cabinet.js")
+
+block main
+  section.intro
+    .intro__inner
+      .intro__top
+        .intro__top-image
+          img(src="/", alt="Avatar")
+
+        .intro__top-revard
+          h4.intro__top-revard-title Reward: 0.625 BNB
+          .intro__top-revard-buttons
+            +button(href="#")
+              | Mint
+            +button(href="#")
+              | Withdraw
+        
+        .intro__top-invited
+          .intro__top-invited-left 
+            span 16
+            span Invited:
+          
+          ul.intro__top-invited-right
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+            li 0x0 .. fde4
+
+      .intro__middle
+        .intro__middle-wallet
+          h4.intro__middle-wallet-title My wallet
+          button.intro__middle-wallet-main
+            .wallet-inner
+              span 0x2598763 .. Dft157dfe589w
+            .wallet-icon
+              img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
+
+        .intro__middle-invite
+          h4.intro__middle-invite-title My wallet
+          button.intro__middle-invite-main
+            .invite-inner
+              span 0x2598763 .. Dft157dfe589w
+            .invite-icon
+              img(src="img/cabinet/copy-icon.svg", alt="copy icon")
+
+        .intro__middle-qualification
+          h4.intro__middle-qualification-title Qualification
+          .qualification__info
+            .qualification__info-first
+              .first-title STATUS:
+              .first-info YES
+            .qualification__info-second
+              .second-title AUTO:
+              .second-info TURBO
+
+      .intro__bottom
+        .intro__bottom-mint
+          h4.mint-title Mint NFT
+
+          .mint-blocks
+            .mint-block.mint-block--green
+              span 0.125
+              span BNB
+            .mint-block.mint-block--green
+              span 0.25
+              span BNB
+            .mint-block.mint-block--orange
+              span 0.5
+              span BNB
+            .mint-block
+              span 1
+              span BNB
+            .mint-block
+              span 2
+              span BNB
+            .mint-block
+              span 4
+              span BNB
+            .mint-block
+              span 8
+              span BNB
+            .mint-block
+              span 16
+              span BNB
+            .mint-block
+              span 32
+              span BNB
+            .mint-block
+              span 64
+              span BNB
+
+        .intro__bottom-slider
+           +cabinet-blocks({
+              list: [
+                {
+                  type: "big",
+                  summ: "0.125",
+                  currency: "BNB",
+                  percent: "64%",
+                  button: "Off"
+                },
+                {
+                  type: "big",
+                  summ: "0.125",
+                  currency: "BNB",
+                  percent: "64%",
+                  button: "Off"
+                },
+                {
+                  type: "big",
+                  summ: "0.125",
+                  currency: "BNB",
+                  percent: "64%",
+                  button: "Off"
+                },
+                {
+                  type: "big",
+                  summ: "0.125",
+                  currency: "BNB",
+                  percent: "64%",
+                  button: "Off"
+                },
+                {
+                  type: "big",
+                  summ: "0.125",
+                  currency: "BNB",
+                  percent: "64%",
+                  button: "Off"
+                }
+              ]
+            })

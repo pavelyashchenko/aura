@@ -1,0 +1,244 @@
+@import "base/_global"
+@import "../includes/modules/cabinet/slider-blocks/index.styl"
+
+.intro
+  background-image url("../img/cabinet/cabinet-bg.webp")
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+
+.intro__inner
+  max-width 1030px
+  margin 0 auto
+  padding 275px 15px 190px
+
+.intro__top
+  display flex
+  align-items flex-start
+  justify-content space-between
+  margin-bottom 50px
+
+  &-image
+    display flex
+    align-items center
+    justify-content space-between
+    width 100%
+    max-width 200px
+    height 222px
+    background rgba(135, 217, 206, 0.05)
+    clip-path polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+
+    img
+      max-width 200px
+      width 100%
+      height 100%
+      object-fit cover
+
+  &-revard
+    &-title
+      font-weight 300
+      font-size 2.4rem
+      line-height 2.9rem
+      margin-bottom 17px
+
+    &-buttons
+      max-width 176px
+      text-align center
+
+      .button
+        width 100%
+
+        &:first-child
+          margin-bottom 14px
+
+  &-invited
+    display flex
+    align-items center
+    justify-content space-between
+    padding 2.6rem 1.9rem 3.2rem 2.4rem
+    background-image url("../img/cabinet/invited-bg.svg")
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+
+    &-left
+      margin-right 35px
+
+      span
+        display block
+
+        &:first-child
+          font-weight 700
+          font-size 5rem
+          line-height 6rem
+          letter-spacing 0.035em
+          color #20EEBC
+
+        &:nth-child(2)
+          font-weight 300
+          font-size 2rem
+          line-height 2.4rem
+
+    &-right
+      height 130px
+      overflow-y auto
+      padding-right 20px
+
+      li
+        font-weight 700
+        font-size 16px
+        line-height 19px
+        margin-bottom 10px
+
+.intro__middle
+  display flex
+  align-items flex-start
+  justify-content space-between
+  margin-bottom 50px
+
+  &-wallet
+    &-title
+      font-weight 400
+      font-size 2rem
+      line-height 2.4rem
+      margin-bottom 15px
+
+    &-main
+      display flex
+      align-items center
+
+      .wallet-inner
+        padding 10px 8px 6px 8px
+        background-color rgba(19, 220, 193, 0.2)
+
+        span
+          font-weight 300
+          font-size 1.6rem
+          line-height 1.9rem
+
+      .wallet-icon
+        padding 7px 6px 3px 6px
+        background-color #00A18C
+
+  &-invite
+    &-title
+      font-weight 400
+      font-size 2rem
+      line-height 2.4rem
+      margin-bottom 15px
+
+    &-main
+      display flex
+      align-items center
+
+      .invite-inner
+        padding 10px 8px 6px 8px
+        background-color rgba(19, 220, 193, 0.2)
+
+        span
+          font-weight 300
+          font-size 1.6rem
+          line-height 1.9rem
+
+      .invite-icon
+        padding 7px 6px 3px 6px
+        background-color #00A18C
+
+  &-qualification
+    &-title
+      font-weight 400
+      font-size 2rem
+      line-height 2.4rem
+      margin-bottom 15px
+
+    .qualification__info
+      max-width 180px
+
+      &-first
+        display flex
+        align-items center
+        justify-content space-between
+        margin-bottom 7px
+
+        .first-title
+          font-weight 300
+          font-size 14px
+          line-height 17px
+
+        .first-info
+          font-weight 700
+          font-size 14px
+          line-height 17px
+          color #20EEBC
+
+      &-second
+        display flex
+        align-items center
+        justify-content space-between
+
+        .second-title
+          font-weight 300
+          font-size 14px
+          line-height 17px
+
+        .second-info
+          font-weight 700
+          font-size 14px
+          line-height 17px
+          color #F13131
+
+.intro__bottom
+  display flex
+  align-items center
+  justify-content space-between
+
+  &-mint
+    flex-shrink 1
+
+    .mint-title
+      font-weight 700
+      font-size 2rem
+      line-height 2.4rem
+      letter-spacing 0.035em
+      margin-bottom 17px
+
+    .mint-blocks
+      display flex
+      max-width 400px
+      flex-wrap wrap
+      max-height 370px
+      margin -6.5px -9px
+
+      .mint-block
+        display flex
+        align-items center
+        justify-content space-between
+        width 45%
+        padding 6px 10px
+        background-color transparent
+        border 1px solid #F13131
+        margin 6.5px 9px
+
+        span
+          &:first-child
+            font-weight 700
+            font-size 16px
+            line-height 19px
+
+          &:nth-child(2)
+            font-weight 300
+            font-size 12px
+            line-height 14px
+
+        &--green
+          background-color #099986
+          border-color transparent
+
+        &--orange
+          background-color #8F7000
+          border-color transparent
+
+  // &-slider
+    // flex-shrink 1
+
+@import "media/_media-landing.styl"

@@ -1,0 +1,18 @@
+mixin cabinet-blocks(data)
+  -
+    const blocks = data.list || [];
+
+  .levels__blocks-mobile
+    .swiper.carousel-price-blocks
+      .swiper-wrapper
+        each block in blocks
+          .swiper-slide
+            .levels__blocks-wrapper(class=`${block.type}`)
+              .levels__blocks-wrapper-inner
+                .levels__blocks-text
+                  span= block.summ
+                  span= block.currency
+                .levels__blocks-percentage
+                  span= block.percent
+                +button(href="#")= block.button
+      .swiper-scrollbar
