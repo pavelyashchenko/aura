@@ -22,6 +22,44 @@
     max-width 710px
     margin 0 auto 100px
 
+    .how-it-works__arrows
+      .how-it-works__arrow
+        span
+          font-size 16px
+          line-height 21px
+
+      #gray-arrow
+        top -38px
+        left 50px
+        width 260px
+        height 80px
+
+      #green-arrow
+        top -20px
+        left 210px
+        width 265px
+        height 70px
+
+      #yellow-arrow1
+        bottom 4px
+        left 187px
+        width 205px
+        height 30px
+
+        & span
+          position absolute
+          bottom -25px
+
+      #yellow-arrow2
+        bottom -15px
+        right 58px
+        width 330px
+        height 60px
+
+        & span
+          position absolute
+          bottom -30px
+
     .number__bank
       width 100px
       height 140px
@@ -96,6 +134,61 @@
   .how-it-works__main
     flex-direction column
 
+    .how-it-works__arrows
+      .how-it-works__arrow
+        span
+          font-size 20px
+          line-height 24px
+
+      #gray-arrow
+        top 200px
+        left 37%
+        width 380px
+        height 120px
+        transform rotate(90deg)
+
+        & span
+          position relative
+          top -10px
+          transform rotate(-90deg)
+
+      #green-arrow
+        top 415px
+        left 32%
+        width 425px
+        height 110px
+        transform rotate(90deg)
+
+        & span
+          position relative
+          top -10px
+          transform rotate(-90deg)
+
+      #yellow-arrow1
+        top 355px
+        right 43%
+        left auto
+        width 235px
+        height 60px
+        transform rotate(90deg)
+
+        & span
+          position absolute
+          bottom -40px
+          transform rotate(-90deg)
+
+      #yellow-arrow2
+        bottom 323px
+        right 25%
+        width 520px
+        height 80px
+        transform rotate(90deg)
+
+        & span
+          position absolute
+          bottom -40px
+          transform rotate(-90deg)
+
     .number__bank
       width 150px
       height 190px
@@ -159,7 +252,6 @@
 
   .about__img
     top -35%
-
 
   .button
     font-size 14px !important
@@ -246,6 +338,20 @@
     picture
       width 79%
 
+  .how-it-works__main
+    .how-it-works__arrows
+      #gray-arrow
+        left 36%
+
+      #green-arrow
+        left 29%
+
+      #yellow-arrow1
+        right 42%
+
+      #yellow-arrow2
+        right 22%
+
 @media(max-width: 425px)
   .footer__menu
     flex-wrap wrap
@@ -257,4 +363,18 @@
 
   .intro__illustration
     width 100%
+
+  .how-it-works__main
+    .how-it-works__arrows
+      #gray-arrow
+        left 26%
+
+      #green-arrow
+        left 16%
+
+      #yellow-arrow1
+        right 38%
+
+      #yellow-arrow2
+        right 5%
 

@@ -85,27 +85,80 @@ const Accordion = () => {
   }
 }
 
-var swiper = new Swiper(".carousel-price-blocks", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  breakpoints: {
-    425: {
-      slidesPerView: 2
-    },
-    640: {
-      slidesPerView: 3
-    },
-    768: {
-      slidesPerView: 4
-    }
-  }
-});
+// Lottie anim
+const grayArow = () => {
+  bodymovin.loadAnimation({
+    container: document.querySelector('#gray-arrow'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/gray-line.json'
+  })
+}
+
+const greenArrow = () => {
+  bodymovin.loadAnimation({
+    container: document.querySelector('#green-arrow'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/green-line.json'
+  })
+}
+
+const yellowArrowFirst = () => {
+  bodymovin.loadAnimation({
+    container: document.querySelector('#yellow-arrow1'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/yellow-line1.json'
+  })
+}
+
+const yellowArrowSecond = () => {
+  bodymovin.loadAnimation({
+    container: document.querySelector('#yellow-arrow2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/yellow-line2.json'
+  })
+}
 
 
 (function() {
+  var swiper = new Swiper(".carousel-price-blocks", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      425: {
+        slidesPerView: 2
+      },
+      640: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      }
+    }
+  });
+
+  setTimeout(function (){
+    grayArow();
+  }, 1700);
+  setTimeout(function (){
+    greenArrow();
+  }, 1700);
+  setTimeout(function (){
+    yellowArrowFirst();
+  }, 1700);
+  setTimeout(function (){
+    yellowArrowSecond();
+  }, 1700);
   Accordion();
 })();
