@@ -1,19 +1,25 @@
 (function() {
-  var swiper = new Swiper(".carousel-price-blocks", {
-    slidesPerView: 1,
+  var swiper = new Swiper(".carousel-cabinet-blocks", {
+    direction: "horizontal",
+    slidesPerView: 2,
     spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+    freeMode: true,
+    mousewheel: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
     },
     breakpoints: {
       425: {
-        slidesPerView: 2
-      },
-      640: {
         slidesPerView: 3
       },
-      768: {
+      640: {
+        slidesPerView: 4
+      },
+      915: {
+        slidesPerView: 5
+      },
+      916: {
         slidesPerView: 4
       }
     }

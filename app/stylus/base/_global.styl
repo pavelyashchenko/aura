@@ -1,4 +1,4 @@
-@import "base/_vars"
+@import "_vars"
 @import "../includes/header/index.styl"
 @import "../includes/footer/index.styl"
 @import "../includes/modules/button/index.styl"
@@ -8,7 +8,7 @@
 
 $font = 'Lato', sans-serif
 
-html
+html 
   height 100%
   box-sizing border-box
   font-size 62.5% // 1rem =10px; 10px/16px = 62.5%
@@ -135,12 +135,7 @@ button
     height 8px
     background radial-gradient(50% 50% at 50% 50%, #085441 0%, #1D2023 77.51%)
 
-// @keyframes numberOpacity
-//   0
-//     opacity 0
-
-//   17%
-//     opacity 1
-
-//   100%
-//     opacity 1
+@media (max-width 650px)
+  .button
+    font-size 14px !important
+    padding 2rem 3rem !important

@@ -171,7 +171,7 @@
     align-items center
     justify-content space-between
     padding 200px 65px 124px 64px
-    height 100vh
+    height 100%
     width 100%
     background-color $bg
     z-index 99
@@ -227,3 +227,39 @@
       .header__mobile-top
         box-shadow none
         backdrop-filter none
+
+@media(max-width: 1024px)
+  .header__desktop
+    .header__logo
+      img
+        max-width 100px
+    .header__menu
+      &-li
+        padding 0 1.5rem
+
+      &-link
+        font-size 12px
+
+@media(max-width: 768px)
+  .header__desktop
+    .header__logo
+      margin-right 3rem
+
+        img
+          max-width 80px
+
+    .header__button
+      margin-right 2rem
+
+    .header__icons
+      &-item
+        img
+          width 20px
+          height 20px
+
+@media(max-width: 650px)
+  .header__desktop
+    display none
+
+  .header__mobile
+    display flex

@@ -1,6 +1,7 @@
 @import "base/_global"
 @import "../includes/modules/cabinet/slider-blocks/index.styl"
 
+
 .intro
   background-image url("../img/cabinet/cabinet-bg.webp")
   background-repeat no-repeat
@@ -193,8 +194,6 @@
   justify-content space-between
 
   &-mint
-    flex-shrink 1
-
     .mint-title
       font-weight 700
       font-size 2rem
@@ -204,8 +203,8 @@
 
     .mint-blocks
       display flex
-      max-width 400px
       flex-wrap wrap
+      width 100%
       max-height 370px
       margin -6.5px -9px
 
@@ -213,7 +212,7 @@
         display flex
         align-items center
         justify-content space-between
-        width 45%
+        width 35%
         padding 6px 10px
         background-color transparent
         border 1px solid #F13131
@@ -238,7 +237,4 @@
           background-color #8F7000
           border-color transparent
 
-  // &-slider
-    // flex-shrink 1
-
-@import "media/_media-landing.styl"
+@import "media/_media-cabinet.styl"
