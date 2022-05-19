@@ -95,18 +95,13 @@ const grayArow = () => {
     path: 'scripts/animations/gray-line.json'
   })
 
-  let startAnim = function () {
-      $(".span1").delay(5000).animate({
-          "opacity": "1"
-      }, 2000, resetAnim)
-  }
-  let resetAnim = function () {
-      $(".span1").delay(1000).animate({
-          "opacity": "0"
-      }, 2000)
-      startAnim();
-  }
-  startAnim()
+  bodymovin.loadAnimation({
+    container: document.querySelector('#percent1'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/100_2_gray_line.json'
+  })
 }
 
 const greenArrow = () => {
@@ -118,19 +113,15 @@ const greenArrow = () => {
     path: 'scripts/animations/green-line.json'
   })
 
-  let startAnim = function () {
-    $(".span2").delay(1200).animate({
-        "opacity": "1"
-    }, 2000, resetAnim)
-  }
-  let resetAnim = function () {
-      $(".span2").delay(4500).animate({
-          "opacity": "0"
-      }, 2000)
-      startAnim();
-  }
-  startAnim()
+  bodymovin.loadAnimation({
+    container: document.querySelector('#percent2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/100_1_green_line.json'
+  })
 }
+
 
 const yellowArrowFirst = () => {
   bodymovin.loadAnimation({
@@ -141,18 +132,13 @@ const yellowArrowFirst = () => {
     path: 'scripts/animations/yellow-line1.json'
   })
 
-  let startAnim = function () {
-    $(".span3").delay(400).animate({
-        "opacity": "1"
-    }, 2000, resetAnim)
-  }
-  let resetAnim = function () {
-      $(".span3").delay(5000).animate({
-          "opacity": "0"
-      }, 2000)
-      startAnim();
-  }
-  startAnim()
+  bodymovin.loadAnimation({
+    container: document.querySelector('#percent3'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/200_1_yellow_line.json'
+  })
 }
 
 const yellowArrowSecond = () => {
@@ -164,18 +150,13 @@ const yellowArrowSecond = () => {
     path: 'scripts/animations/yellow-line2.json'
   })
 
-  let startAnim = function () {
-    $(".span4").delay(3000).animate({
-        "opacity": "1"
-    }, 2000, resetAnim)
-  }
-  let resetAnim = function () {
-      $(".span4").delay(3000).animate({
-          "opacity": "0"
-      }, 2000)
-      startAnim();
-  }
-  startAnim()
+  bodymovin.loadAnimation({
+    container: document.querySelector('#percent4'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'scripts/animations/200_2_yellow_line.json'
+  })
 }
 
 
@@ -202,15 +183,10 @@ const yellowArrowSecond = () => {
 
   setTimeout(function (){
     grayArow();
-  }, 1700);
-  setTimeout(function (){
     greenArrow();
-  }, 1700);
-  setTimeout(function (){
     yellowArrowFirst();
-  }, 1700);
-  setTimeout(function (){
     yellowArrowSecond();
   }, 1700);
+
   Accordion();
 })();
