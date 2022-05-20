@@ -8,7 +8,7 @@ mixin footer()
           | Smart and fast product to help you meet your clients' needs.
         .footer__icons
           each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-facebook.svg': 'Facebook', 'img/icons/footer-discord.svg': 'Discord', 'img/icons/footer-post.svg': 'Post'}
-            a.footer__icons-item(href="#")
+            a.footer__icons-item(href="#" target="_blank")
               img(src=value, alt=key)
 
       .footer__right 

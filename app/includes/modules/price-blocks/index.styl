@@ -3,84 +3,89 @@
   align-items flex-start
   justify-content space-between
 
+  .swiper
+    .swiper-wrapper
+      width 1112px
+      padding-bottom 30px
+
+      .swiper-slide
+        &:nth-child(1)
+          .levels__blocks-level
+            background-image url("../img/fifth/level-1.svg")
+
+        &:nth-child(2)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-2.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-2.svg")
+
+        &:nth-child(3)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-3.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-3.svg")
+
+        &:nth-child(4)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-4.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-4.svg")
+
+        &:nth-child(5)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-5.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-5.svg")
+
+        &:nth-child(6)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-6.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-6.svg")
+
+        &:nth-child(7)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-7.svg")
+
+          .levels__blocks-level
+            background-image url("../img/fifth/level-7.svg")
+
+        &:nth-child(8)
+          .levels__blocks-wrapper-inner
+            background-image url("../img/fifth/bg-8.svg")
+
+          .levels__blocks-level
+            background-position center -3px
+            background-image url("../img/fifth/level-8.svg")
+
+  .swiper-scrollbar-drag
+    background-color #276259 !important
+
 .levels__blocks-wrapper
   position relative
   max-width 198px
   width 100%
   height 442px
-  clip-path polygon(50% 0%,100% 12.5%,100% 87.5%,50% 100%,0 87.5%,0 12.5%)
+  clip-path polygon(50% 0%, 100% 12.5%, 100% 87.5%, 50% 100%, 0 87.5%, 0 12.5%)
   background-color rgba(58, 255, 216, 0.3)
 
   &:not(:first-child)
     margin-left 2.3rem
-
-  &:nth-child(1)
-    .levels__blocks-level
-      background-size contain
-      background-repeat no-repeat
-      background-image url("../img/fifth/level-1.svg")
-  
-  &:nth-child(2)
-    .levels__blocks-wrapper-inner
-      background-image url("../img/fifth/bg-2.svg")
-
-    .levels__blocks-level
-      background-size contain
-      background-repeat no-repeat
-      background-image url("../img/fifth/level-2.svg")
-  
-  &:nth-child(3)
-    padding-top 3.5rem
-
-    .levels__blocks-wrapper-inner
-      background-image url("../img/fifth/bg-3.svg")
-    
-    .levels__blocks-level
-      background-size contain
-      background-repeat no-repeat
-      background-image url("../img/fifth/level-3.svg")
-      width 72px
-      height 84px
-      padding 1.3rem 1.7rem 1.9rem 1.8rem
-  
-  &:nth-child(4)
-    padding-top 3.5rem
-
-    .levels__blocks-wrapper-inner
-      background-image url("../img/fifth/bg-4.svg")
-    
-    .levels__blocks-level
-      background-size contain
-      background-repeat no-repeat
-      background-image url("../img/fifth/level-4.svg")
-      width 72px
-      height 84px
-      padding 1.3rem 1.7rem 1.9rem 1.8rem
-
-  &:nth-child(5)
-    filter drop-shadow(0px 0px 130px #1CCFA3)
-    padding-top 2.9rem
-
-    .levels__blocks-wrapper-inner
-      background-image url("../img/fifth/bg-5.svg")
-    
-    .levels__blocks-level
-      background-size contain
-      background-repeat no-repeat
-      background-image url("../img/fifth/level-5.svg")
-      width 78px
-      height 90px
-      padding 1.6rem 1.3rem 2.2rem 1.2rem
 
 .levels__blocks-wrapper-inner
   position absolute
   top 1px
   left 1px
   padding 4.6rem 2.6rem 6.9rem 2.9rem
-  max-width 196px
+  max-width 135px
   width 100%
-  height 440px
-  clip-path polygon(50% 0%,100% 12.5%,100% 87.5%,50% 100%,0 87.5%,0 12.5%)
+  height 325px
+  clip-path polygon(50% 0%, 100% 12.5%, 100% 87.5%, 50% 100%, 0 87.5%, 0 12.5%)
   background-color #1D2126
   background-size 85%
   background-repeat no-repeat
@@ -92,6 +97,8 @@
   width 62px
   height 73px
   margin 0 auto 2.25rem
+  background-size contain
+  background-repeat no-repeat
 
   span
     display block
@@ -124,14 +131,14 @@
 .levels__blocks-mobile
   display none
 
-@media(max-width: 1024px)
+@media (max-width 1024px)
   .levels__blocks-wrapper
     height 362px
 
   .levels__blocks-wrapper-inner
     height 360px
 
-@media(max-width: 768px)
+@media (max-width 768px)
   .levels__blocks
     display none
 
@@ -149,44 +156,43 @@
             .levels__blocks-wrapper-inner
               .levels__blocks-level
                 background-image url("../img/fifth/level-1.svg")
-        
+
           &:nth-child(2)
             .levels__blocks-wrapper-inner
               background-image url("../img/fifth/bg-2.svg")
 
               .levels__blocks-level
                 background-image url("../img/fifth/level-2.svg")
-        
+
           &:nth-child(3)
             .levels__blocks-wrapper-inner
               background-image url("../img/fifth/bg-3.svg")
-            
+
             .levels__blocks-level
               background-image url("../img/fifth/level-3.svg")
-          
+
           &:nth-child(4)
             .levels__blocks-wrapper-inner
               background-image url("../img/fifth/bg-4.svg")
-            
+
             .levels__blocks-level
               background-image url("../img/fifth/level-4.svg")
 
           &:nth-child(5)
             .levels__blocks-wrapper-inner
               background-image url("../img/fifth/bg-5.svg")
-            
+
             .levels__blocks-level
               background-image url("../img/fifth/level-5.svg")
               width 72px
               height 83px
-
 
     .levels__blocks-wrapper
       position relative
       max-width 100%
       width 100%
       height 442px
-      clip-path polygon(50% 0%,100% 12.5%,100% 87.5%,50% 100%,0 87.5%,0 12.5%)
+      clip-path polygon(50% 0%, 100% 12.5%, 100% 87.5%, 50% 100%, 0 87.5%, 0 12.5%)
       background-color rgba(58, 255, 216, 0.3)
 
     .levels__blocks-wrapper-inner
@@ -197,7 +203,7 @@
       max-width calc(100% - 37px)
       width 100%
       height 366px
-      clip-path polygon(50% 0%,100% 12.5%,100% 87.5%,50% 100%,0 87.5%,0 12.5%)
+      clip-path polygon(50% 0%, 100% 12.5%, 100% 87.5%, 50% 100%, 0 87.5%, 0 12.5%)
       background-color #1D2126
       background-size 90%
       background-repeat no-repeat
@@ -211,7 +217,7 @@
       background-size contain
       background-repeat no-repeat
       margin-bottom 30px
-      
+
       span
         &:nth-child(1)
           font-size 24px

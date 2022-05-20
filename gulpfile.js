@@ -34,9 +34,9 @@ gulp.task('script', function(){
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/lottie-web/build/player/lottie.min.js',
-    'node_modules/micromodal/dist/micromodal.min.js',
     'node_modules/wow.js/dist/wow.min.js',
-    'node_modules/swiper/swiper-bundle.min.js'
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/micromodal/dist/micromodal.min.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())

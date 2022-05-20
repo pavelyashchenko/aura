@@ -1,3 +1,6 @@
+import MicroModal from 'micromodal';
+var MicroModal = require('micromodal');
+
 (function () {
   (function fixedHeader() {
     $(window).scroll(function(){
@@ -17,6 +20,5 @@
   })();
 
 	new WOW().init();
+  MicroModal.init();
 })();
-
-

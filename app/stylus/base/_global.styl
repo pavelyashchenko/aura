@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap")
 @import "_vars"
 @import "../includes/header/index.styl"
 @import "../includes/footer/index.styl"
 @import "../includes/modules/button/index.styl"
 @import "../includes/modules/pictures/index.styl"
+@import "../includes/modules/modals/index.styl"
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap')
+$font = "Lato", sans-serif
 
-$font = 'Lato', sans-serif
-
-html 
+html
   height 100%
   box-sizing border-box
+  scroll-behavior smooth
   font-size 62.5% // 1rem =10px; 10px/16px = 62.5%
 
   @media (max-width 1024px)
@@ -18,6 +19,7 @@ html
 
   @media (max-width 768px)
     font-size 40% // 1rem = 6.4; 6.4px/16px = 40%
+
 *,
 *::before,
 *::after
@@ -46,7 +48,7 @@ a
 
   &:focus-visible
     outline solid
-  
+
 p,
 span,
 ul,
@@ -104,7 +106,7 @@ button
 
 .link-underline
   position relative
-  
+
   &::after
     position absolute
     content ""
@@ -113,7 +115,7 @@ button
     height 2px
     width 0
     background-color $white
-    transition width .3s
+    transition width 0.3s
 
   &:hover
     &::after

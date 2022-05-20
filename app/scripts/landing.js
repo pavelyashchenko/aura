@@ -122,7 +122,6 @@ const greenArrow = () => {
   })
 }
 
-
 const yellowArrowFirst = () => {
   bodymovin.loadAnimation({
     container: document.querySelector('#yellow-arrow1'),
@@ -159,10 +158,21 @@ const yellowArrowSecond = () => {
   })
 }
 
-
 (function() {
-  var swiper = new Swiper(".carousel-price-blocks", {
-    slidesPerView: 1,
+  var swiper = new Swiper("#price-blocks", {
+    direction: "horizontal",
+    slidesPerView: 5,
+    spaceBetween: 30,
+    freeMode: true,
+    mousewheel: false,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
+    }
+  });
+  
+  var swiper2 = new Swiper("#mobile-price-blocks", {
+    slidesPerView: 1.5,
     spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -189,4 +199,5 @@ const yellowArrowSecond = () => {
   }, 1700);
 
   Accordion();
+  MicroModal.init();
 })();

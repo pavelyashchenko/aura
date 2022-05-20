@@ -8,14 +8,14 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each link in ["About us", "Benefits", "Roadmap", "FAQ"]
+              each key, value in {"About us": 'about', "Benefits": 'benefits', "Roadmap": 'roadmap', "FAQ": 'faq'}
                 li.header__menu-li
-                  a.header__menu-link.link-underline(href="#")= link
+                  a.header__menu-link.link-underline(href=`#${key}` )= value
 
         .header__right
           .header__button
             if headerButton === "landing"
-              +button(href="#")
+              +button(href="#" data-micromodal-trigger="#modal-connect")
                 | Connect wallet
 
             if headerButton === "cabinet"
@@ -24,7 +24,7 @@ mixin header()
 
           .header__icons
             each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/facebook.svg': 'Facebook', 'img/icons/discord.svg': 'Discord', 'img/icons/post.svg': 'Post'}
-              a.header__icons-item(href="#")
+              a.header__icons-item(href="#" target="_blank")
                 img(src=value, alt=key)
 
     .header__mobile
@@ -71,5 +71,5 @@ mixin header()
 
         .header__icons
           each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/facebook.svg': 'Facebook', 'img/icons/discord.svg': 'Discord', 'img/icons/post.svg': 'Post'}
-            a.header__icons-item(href="#")
+            a.header__icons-item(href="#" target="_blank")
               img(src=value, alt=key)
