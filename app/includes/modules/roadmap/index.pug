@@ -4,7 +4,7 @@ mixin roadmap(data)
 
   .roadmap__blocks
     each block in blocks
-      .roadmap__blocks-wrapper.wow(class=`roadmap--${block.side} ${block.animation}`)
+      .roadmap__blocks-wrapper.wow(class=`roadmap--${block.side} ${block.animation}` data-wow-delay=".2s")
         .roadmap__blocks-left 
           h3.roadmap__blocks-title= block.title
           p.roadmap__blocks-text= block.text

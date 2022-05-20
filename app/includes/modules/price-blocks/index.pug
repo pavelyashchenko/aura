@@ -7,14 +7,14 @@ mixin price-block(data)
       .swiper-wrapper
         each block in blocks
           .swiper-slide
-            .levels__blocks-wrapper.wow(class=`${block.animation}` data-wow-delay="1.5s")
+            .levels__blocks-wrapper.wow(class=`${block.animation}` data-wow-delay=".2s")
               .levels__blocks-wrapper-inner
                 .levels__blocks-level
                   span= block.level
                   span level
                 p.levels__blocks-price= block.price
                 p.levels__blocks-text= block.text
-                +button(href="#")
+                +button(href="#" data-izimodal-open="#modal-connect")
                   | Buy
       .swiper-scrollbar
 
@@ -30,7 +30,7 @@ mixin price-block(data)
                   span level
                 p.levels__blocks-price= block.price
                 p.levels__blocks-text= block.text
-                +button(href="#")
+                +button(href="#" data-izimodal-open="#modal-connect")
                   | Buy
       .swiper-button-next
       .swiper-button-prev

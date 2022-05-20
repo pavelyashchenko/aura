@@ -191,6 +191,16 @@ const yellowArrowSecond = () => {
     }
   });
 
+  (function modalFaqLink() {
+    $("#modal-link-faq").on("click", function(){
+      $('html, body').animate({
+        scrollTop: $("#faq").offset().top
+      });
+
+      $(".modal").iziModal("close");
+    })
+  })();
+
   setTimeout(function (){
     grayArow();
     greenArrow();
@@ -199,5 +209,4 @@ const yellowArrowSecond = () => {
   }, 1700);
 
   Accordion();
-  MicroModal.init();
 })();

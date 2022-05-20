@@ -19,9 +19,9 @@
     "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.1",
     "gulp-uglify": "^3.0.2",
+    "izimodal": "^1.5.1",
     "jquery": "^3.6.0",
     "lottie-web": "^5.9.4",
-    "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
     "swiper": "^8.1.5",
     "wow.js": "^1.2.2"

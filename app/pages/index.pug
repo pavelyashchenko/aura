@@ -20,9 +20,10 @@ block scripts
   script(src="scripts/landing.js")
 
 block main
+
   section.intro#intro
     .intro__inner
-      .intro__info.wow.fadeInLeft
+      .intro__info.wow.fadeInLeft(data-wow-delay=".2s")
         h1.intro__title Aura Bank
         p.intro__message
           | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
@@ -36,11 +37,11 @@ block main
             "class": "wow fadeIn",
             "data-wow-duration": "2s",
             "data-wow-offset": "10",
-            "data-wow-delay": ".1s"
+            "data-wow-delay": ".2s"
             }
         })
 
-  section.results#results.wow.fadeInDown(data-wow-delay="1s")
+  section.results#results.wow.fadeInDown(data-wow-delay=".2s")
     .results__inner
       .results__container
         h3.results__title Our Results in Numbers
@@ -52,7 +53,7 @@ block main
 
   section.pass#pass
     .pass__inner
-      .pass__info.wow.fadeInLeft(data-wow-delay=".5s")
+      .pass__info.wow.fadeInLeft(data-wow-delay=".2s")
         h2.pass__title.section-title AURA Pass
         p.pass__message
           | Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut&nbsp;labore et&nbsp;dolore magnam aliquam quaerat voluptatem. Ut&nbsp;enim ad&nbsp;minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut&nbsp;aliquid ex&nbsp;ea&nbsp;commodi consequatur? Quis autem vel eum iure reprehenderit qui in&nbsp;ea&nbsp;voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
@@ -68,14 +69,14 @@ block main
             "class": "wow fadeInRight",
             "data-wow-duration": "2s",
             "data-wow-offset": "10",
-            "data-wow-delay": ".5s"
+            "data-wow-delay": ".2s"
             }
         })
 
-  section.how-it-works#how-it-works.wow.fadeInDown(data-wow-delay=".5s")
+  section.how-it-works#how-it-works.wow.fadeInDown(data-wow-delay=".2s")
     .how-it-works__inner
-      h2.how-it-works__title.section-title.wow.fadeInDown(data-wow-delay=".7s") How it works
-      p.how-it-works__message.wow.fadeInDown(data-wow-delay=".8s")
+      h2.how-it-works__title.section-title.wow.fadeInDown(data-wow-delay=".4s") How it works
+      p.how-it-works__message.wow.fadeInDown(data-wow-delay=".6s")
         | The client buys NFTs of&nbsp;different levels. Each level has its own price.<br> After purchasing the NFT, the client must qualify (bring 2&nbsp;referrals) to&nbsp;join the queue. The queue can also be&nbsp;purchased for the customer level NFT cost. By&nbsp;bringing 2&nbsp;referrals, the client receives back 100% of&nbsp;the cost of&nbsp;NFT.
 
       .how-it-works__main
@@ -89,27 +90,27 @@ block main
           .how-it-works__arrow#yellow-arrow2
             span#percent4
 
-        .number__bank.wow.fadeInLeft(data-wow-delay="1s")
+        .number__bank.wow.fadeInLeft(data-wow-delay=".8s")
           span Bank
-        .number__single.first__single.wow.fadeInDown(data-wow-delay="1.2s")
+        .number__single.first__single.wow.fadeInDown(data-wow-delay="1s")
           span 1
-        .number__double.wow.fadeInDown(data-wow-delay="1.4s")
-          .number__single.wow.fadeInUp(data-wow-delay="1.6s")
+        .number__double.wow.fadeInDown(data-wow-delay="1.2s")
+          .number__single.wow.fadeInUp(data-wow-delay="1.4s")
             span 2
-          .number__single.wow.fadeInDown(data-wow-delay="1.8s")
+          .number__single.wow.fadeInDown(data-wow-delay="1.6s")
             span 3
-        .number__single.wow.fadeInUp(data-wow-delay="2s")
+        .number__single.wow.fadeInUp(data-wow-delay="1.8s")
           span 1
-        .number__double.wow.fadeInUp(data-wow-delay="2.2s")
-          .number__single.wow.fadeInDown(data-wow-delay="2.5s")
+        .number__double.wow.fadeInUp(data-wow-delay="2s")
+          .number__single.wow.fadeInDown(data-wow-delay="2.2s")
             span 4
-          .number__single.wow.fadeInUp(data-wow-delay="2.7s")
+          .number__single.wow.fadeInUp(data-wow-delay="2.4s")
             span 5
 
-      p.how-it-works__message.wow.fadeInDown(data-wow-delay="2.9s")
+      p.how-it-works__message.wow.fadeInDown(data-wow-delay="2.6s")
         | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
 
-  section.levels#levels.wow.fadeInUp(data-wow-delay=".5s")
+  section.levels#levels.wow.fadeInUp(data-wow-delay=".2s")
     .levels__inner
       h2.levels__title.section-title Levels
       p.levels__message
@@ -118,49 +119,49 @@ block main
       +price-block({
         list: [
           {
-            animation: "fadeInLeft",
+            animation: "fadeInUp",
             level: "1",
             price: "$50",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInDown",
             level: "2",
             price: "$100",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInUp",
             level: "3",
             price: "$200",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInDown",
             level: "4",
             price: "$300",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInUp",
             level: "5",
             price: "$400",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInDown",
             level: "6",
             price: "$500",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInUp",
             level: "7",
             price: "$600",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           },
           {
-            animation: "fadeInLeft",
+            animation: "fadeInDown",
             level: "8",
             price: "$700",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
@@ -168,7 +169,7 @@ block main
         ]
       })
 
-  section.benefits#benefits.wow.fadeInDown(data-wow-delay=".5s")
+  section.benefits#benefits.wow.fadeInDown(data-wow-delay=".2s")
     .benefits__inner
       h2.benefits__title.section-title Benefits
 
@@ -198,7 +199,7 @@ block main
       })
 
   section.about#about
-    .about__inner.wow.fadeInLeft(data-wow-delay="1s")
+    .about__inner.wow.fadeInLeft(data-wow-delay=".2s")
       .about__info
         h2.about__title.section-title About AURA
         p.about__message
@@ -207,7 +208,7 @@ block main
         p.about__message
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat.
 
-    .about__img.wow.fadeInRight(data-wow-delay="1s")
+    .about__img.wow.fadeInRight(data-wow-delay=".2s")
       +picture({
         lazy: false,
         path: "img/seventh/about-img.png",
@@ -263,7 +264,7 @@ block main
         ]
       })
 
-  section.faq#faq.wow.fadeInDown(data-wow-delay=".5s")
+  section.faq#faq.wow.fadeInDown(data-wow-delay=".2s")
     .faq__inner
       h2.faq__title.section-title FAQ
 
@@ -284,7 +285,7 @@ block main
       +button(href="#")
         | Learn more
 
-  section.team#team.wow.fadeInLeft(data-wow-delay=".5s")
+  section.team#team.wow.fadeInLeft(data-wow-delay=".2s")
     .team__inner
       h2.team__title.section-title Our Team
 
@@ -307,3 +308,4 @@ block main
           }
         ]
       })
+    

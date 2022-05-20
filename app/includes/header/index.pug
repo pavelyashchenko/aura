@@ -15,7 +15,7 @@ mixin header()
         .header__right
           .header__button
             if headerButton === "landing"
-              +button(href="#" data-micromodal-trigger="#modal-connect")
+              +button(href="#" data-izimodal-open="#modal-connect")
                 | Connect wallet
 
             if headerButton === "cabinet"
@@ -62,7 +62,7 @@ mixin header()
 
         .header__button
           if headerButton === "landing"
-            +button(href="#")
+            +button(href="#" data-izimodal-open="#modal-connect")
               | Connect wallet
 
           if headerButton === "cabinet"

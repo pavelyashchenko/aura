@@ -2,17 +2,35 @@ mixin modal-connect(data)
   //- -
   //-   const title = data.title || "";
  
-  #modal-connect(aria-hidden='true')
-    div(tabindex='-1' data-micromodal-close='')
-      div(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
-        h2#modal-connect-title Connect wallet
-        button(aria-label='Close modal' data-micromodal-close='')
-        button#modal-connect-button
-          .img
-            img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
-          .info
-            .info__title Metamask
-            .info__message Desktop/ DApp in app
-          
-        p#modal-connect-content
-          | Got questions? <a href="/#faq">Go to FAQ</a>
+  .modal.modal-connect#modal-connect
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    h2.modal-connect-title Connect wallet
+    a.modal-connect-button(href="#" target="_blank")
+      .img
+        img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
+      .info
+        .info__title Metamask
+        .info__message Desktop/ DApp in app
+      
+    p.modal-connect-content
+      | Got questions? <a href="#faq" id="modal-link-faq">Go to FAQ</a>
+
+mixin modal-error(data)
+  //- -
+  //-   const title = data.title || "";
+ 
+  .modal.modal-error#modal-error
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    h2.modal-error-title Connect wallet
+    button.modal-error-button
+      .img
+        img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
+      .info
+        .info__title Metamask
+        .info__message Desktop/ DApp in app
+      
+    p.modal-error-content
+      | Got questions? <a href="#faq">Go to FAQ</a>
+
