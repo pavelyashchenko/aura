@@ -181,6 +181,8 @@ const showMoreFaq = () => {
 	});
 };
 
+var parallaxInstance = new Parallax(parallax);
+
 (function () {
 	var swiper = new Swiper('#price-blocks', {
 		direction: 'horizontal',
@@ -224,5 +226,4 @@ const showMoreFaq = () => {
 	modalFaqLink();
 	showMoreFaq();
 
-  var parallaxInstance = new Parallax(parallax);
 })();

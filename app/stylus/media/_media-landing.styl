@@ -83,6 +83,9 @@
     top -23%
 
 @media (max-width 768px)
+  .intro
+    margin-bottom 30px
+
   .intro__inner
     padding-top 15rem
     padding-bottom 5rem
@@ -95,10 +98,15 @@
     &-inner
       width 250px
 
+  .results
+    margin-bottom 0
+
   .results__inner
     background-size contain
 
   .pass
+    margin-bottom 110px
+
     &::before
       top 250%
 
@@ -110,6 +118,7 @@
     position relative
     flex-direction column
     max-width 320px
+    margin 0 auto
 
     .how-it-works__arrows
       #gray-arrow
@@ -222,6 +231,7 @@
   .how-it-works__message
     font-size 14px
     line-height 1.4
+    margin 0 auto
 
   .about__img
     top -35%
@@ -299,6 +309,22 @@
 
   .how-it-works__main
     transform none
+
+  .benefits__blocks
+    &-wrapper
+      margin-bottom 0
+
+      &:not(:first-child)
+        margin-bottom 0
+
+      &:last-child
+        margin-bottom 50px
+
+  .about__inner
+    &::before
+      bottom -120px
+      max-width 25px
+      height 100px
 
 @media (max-width 425px)
   .intro__illustration

@@ -56,9 +56,9 @@ mixin header()
       .header__mobile-inner
         nav.header__menu
           ul.header__menu-ul
-            each link in ["About us", "Benefits", "Roadmap", "FAQ"]
+            each key, value in {"About us": 'about', "Benefits": 'benefits', "Roadmap": 'roadmap', "FAQ": 'faq'}
               li.header__menu-li
-                a.header__menu-link(href="#")= link
+                a.header__menu-link.link-underline(href=`#${key}` )= value
 
         .header__button
           if headerButton === "landing"
