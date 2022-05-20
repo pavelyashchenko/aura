@@ -181,7 +181,10 @@ const showMoreFaq = () => {
 	});
 };
 
-var parallaxInstance = new Parallax(parallax);
+const parallaxInit = () => {
+  var scene = $('#parallax').get(0);
+  var parallaxInstance = new Parallax(scene);
+}
 
 (function () {
 	var swiper = new Swiper('#price-blocks', {
@@ -216,6 +219,7 @@ var parallaxInstance = new Parallax(parallax);
 		},
 	});
 
+  
 	Accordion();
 	setTimeout(function () {
 		grayArow();
@@ -225,5 +229,6 @@ var parallaxInstance = new Parallax(parallax);
 	}, 1700);
 	modalFaqLink();
 	showMoreFaq();
+  parallaxInit();
 
 })();
