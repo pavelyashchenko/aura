@@ -37,7 +37,8 @@ gulp.task('script', function(){
     'node_modules/lottie-web/build/player/lottie.min.js',
     'node_modules/wow.js/dist/wow.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
-    'node_modules/izimodal/js/iziModal.min.js'
+    'node_modules/izimodal/js/iziModal.min.js',
+    'node_modules/parallax-js/dist/parallax.min.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())

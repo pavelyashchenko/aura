@@ -20,7 +20,6 @@ block scripts
   script(src="scripts/landing.js")
 
 block main
-
   section.intro#intro
     .intro__inner
       .intro__info.wow.fadeInLeft(data-wow-delay=".2s")
@@ -29,17 +28,46 @@ block main
           | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
 
       .intro__illustration.wow.fadeInRight
-        +picture({
-          lazy: false,
-          path: "img/first/nft-viz.png",
-          attr: { "alt": "NFT" },
-          mainAttr: {
-            "class": "wow fadeIn",
-            "data-wow-duration": "2s",
-            "data-wow-offset": "10",
-            "data-wow-delay": ".2s"
-            }
-        })
+        .intro__illustration-inner
+          #parallax
+            .intro__illustration-smokebot(data-depth="3")
+              +picture({
+                lazy: false,
+                path: "img/first/smoke-bottom.png",
+                attr: { "alt": "NFT" },
+                mainAttr: {
+                  "class": "wow fadeIn",
+                  "data-wow-duration": "2s",
+                  "data-wow-offset": "10",
+                  "data-wow-delay": ".2s"
+                  }
+              })
+
+            .intro__illustration-main(data-depth="0.5")
+              +picture({
+                lazy: false,
+                path: "img/first/nft-viz.png",
+                attr: { "alt": "NFT" },
+                mainAttr: {
+                  "class": "wow fadeIn",
+                  "data-wow-duration": "2s",
+                  "data-wow-offset": "10",
+                  "data-wow-delay": ".2s"
+                  }
+              })
+
+            .intro__illustration-smoketop(data-depth="1.5")
+              +picture({
+                lazy: false,
+                path: "img/first/smoke-top.png",
+                attr: { "alt": "NFT" },
+                mainAttr: {
+                  "class": "wow fadeIn",
+                  "data-wow-duration": "2s",
+                  "data-wow-offset": "10",
+                  "data-wow-delay": ".2s"
+                  }
+              })
 
   section.results#results.wow.fadeInDown(data-wow-delay=".2s")
     .results__inner
@@ -57,7 +85,7 @@ block main
         h2.pass__title.section-title AURA Pass
         p.pass__message
           | Sed ut&nbsp;perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab&nbsp;illo inventore veritatis et&nbsp;quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut&nbsp;labore et&nbsp;dolore magnam aliquam quaerat voluptatem. Ut&nbsp;enim ad&nbsp;minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut&nbsp;aliquid ex&nbsp;ea&nbsp;commodi consequatur? Quis autem vel eum iure reprehenderit qui in&nbsp;ea&nbsp;voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-        +button(href="#")
+        +button(href="#" target="_blank")
           | View on openSea
 
       .pass__img
@@ -109,6 +137,10 @@ block main
 
       p.how-it-works__message.wow.fadeInDown(data-wow-delay="2.6s")
         | In&nbsp;the queue, the client waits until 2&nbsp;people stand behind him, after which he&nbsp;will receive 200% of&nbsp;the cost of&nbsp;his level, but 100% will go&nbsp;back to&nbsp;the system in&nbsp;order to&nbsp;re-queue for payment.<br> Each client has the opportunity to&nbsp;move to&nbsp;a&nbsp;higher level by&nbsp;purchasing the necessary NFT, and repeat the process at&nbsp;a&nbsp;new level.
+
+      .how-it-works__button.wow.fadeInDown(data-wow-delay="2.8s")
+        +button(href="#")
+          | View Presentation
 
   section.levels#levels.wow.fadeInUp(data-wow-delay=".2s")
     .levels__inner
@@ -269,20 +301,32 @@ block main
       h2.faq__title.section-title FAQ
 
       +accordion()
-        +accordion-item("<h3>How can I make the order?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-        +accordion-item("<h3>What if I don’t know what plan I need?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-        +accordion-item("<h3>What payment options do you provide for clients?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-        +accordion-item("<h3>Do you have a money back guarantee?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-        +accordion-item("<h3>How can I change my plan?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
-        +accordion-item("<h3>Can I get video consultation with your specialist?</h3>")
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua.
+        +accordion-item("<h3>How much will a member get for referring new members?</h3>")
+          | For the first two referrals, the participant receives 100% from each, starting from the third, 50% for each new participant. The referral program only works to&nbsp;attract new members to&nbsp;the first level.
+        +accordion-item("<h3>If I buy more NFTs in the same level, will another queue open?</h3>")
+          | No. You will simply have more NFTs. One NFT is&nbsp;enough to&nbsp;participate in&nbsp;the program. You can buy NFT as&nbsp;a&nbsp;gift.
+        +accordion-item("<h3>Can I buy the 5th level immediately without going through the other levels below?</h3>")
+          | It&nbsp;will be&nbsp;possible to&nbsp;buy Level 5&nbsp;NFTs on&nbsp;the secondary market. You can mint NFT by&nbsp;levels strictly sequentially. In&nbsp;order to&nbsp;mint level 5&nbsp;NFTs, you must have NFTs of&nbsp;the first 4&nbsp;levels in&nbsp;your wallet.
+        +accordion-item("<h3>If I buy an NFT from level 2 and give it as a gift, will the new owner be able to take part in level 2 right away with it?</h3>")
+          | No. Ownership of&nbsp;NFT tokens of&nbsp;all previous levels will be&nbsp;checked. If&nbsp;the wallet of&nbsp;the new owner contains NFT level&nbsp;1, he&nbsp;will be&nbsp;able to&nbsp;activate the 2nd level and join the queue.
+        +accordion-item("<h3>If I join the tier 2 queue and sell my only tier 2 NFT, will I still be in the queue?</h3>")
+          | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
+        +accordion-item("<h3>Will my place in the queue be sold along with the NFT?</h3>")
+          | No.
+
+        .faq__hidden-blocks
+          +accordion-item("<h3>Can I withdraw money from my balance while in the queue?</h3>")
+            | You can withdraw all available funds on&nbsp;your balance at&nbsp;any time. Information about your balance and a&nbsp;button for withdrawing all money from it&nbsp;are available in&nbsp;your Personal Account.
+          +accordion-item("<h3>Can I partially withdraw money?</h3>")
+            | No. You can only withdraw the entire amount on&nbsp;your balance.
+          +accordion-item("<h3>What do I need to do to get in line?</h3>")
+            | In&nbsp;the first level, you need to&nbsp;buy a&nbsp;level 1&nbsp;NFT and earn a&nbsp;qualification. You will automatically be&nbsp;placed in&nbsp;a&nbsp;queue after qualifying.
+          +accordion-item("<h3>How to get a qualification?</h3>")
+            | You may get qualification by&nbsp;referring two new level 1&nbsp;NFT buyers or&nbsp;doing a&nbsp;turbo boost (buy without attracting buyers at&nbsp;double price of&nbsp;level&nbsp;1).
+          +accordion-item("<h3>How to get into the queue of the next level?</h3>")
+            | To&nbsp;get to&nbsp;the next level, you need to&nbsp;have passed the qualification in&nbsp;the first level and have the NFT of&nbsp;the previous levels.
       
-      +button(href="#")
+      +button.faq__button-learn-more(type="button")
         | Learn more
 
   section.team#team.wow.fadeInLeft(data-wow-delay=".2s")
@@ -308,4 +352,6 @@ block main
           }
         ]
       })
+
+  +modal-connect()
     

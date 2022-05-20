@@ -1,4 +1,8 @@
 @media (max-width 1024px)
+  .intro__inner
+    padding-top 15rem
+    padding-bottom 10rem
+
   .intro__illustration
     width 50%
     margin-right 0
@@ -79,6 +83,18 @@
     top -23%
 
 @media (max-width 768px)
+  .intro__inner
+    padding-top 15rem
+    padding-bottom 5rem
+
+  .intro__illustration
+    min-width 320px
+    background-position 56px 57%
+    background-size 210px
+
+    &-inner
+      width 250px
+
   .results__inner
     background-size contain
 
@@ -214,6 +230,15 @@
   .intro
     margin-bottom 100px
 
+  .intro__illustration
+    justify-content center
+    min-width 100%
+    background-position center -8px
+    background-size 268px
+
+    &-inner
+      transform none
+
   .intro__inner
     flex-direction column
 
@@ -226,8 +251,9 @@
     order 2
 
   .intro__illustration
-    width 80%
+    width 100%
     order 1
+    padding-bottom 30px
 
     &::after
       content none
@@ -271,9 +297,18 @@
     picture
       width 79%
 
+  .how-it-works__main
+    transform none
+
 @media (max-width 425px)
   .intro__illustration
     width 100%
+    height 350px
+    background-position center
+    background-size 70%
+
+    &-inner
+      width 220px
 
   .how-it-works__main
     max-width 220px

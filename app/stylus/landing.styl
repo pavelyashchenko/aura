@@ -7,7 +7,7 @@
 
 .intro
   position relative
-  margin-bottom 18rem
+  margin-bottom 50px
 
   &::before
     position absolute
@@ -21,7 +21,7 @@
     background-position center
     background-size cover
     z-index -1
-    opacity 0.4
+    opacity 0.6
 
 .intro__inner
   position relative
@@ -29,36 +29,35 @@
   align-items center
   justify-content space-between
   max-width 1250px
-  padding 10.5rem 15px 0
+  padding 20rem 15px 18rem
   margin 0 auto
 
-  &::before
+  &::before,
+  &::after
     position absolute
     content ""
+    background-repeat no-repeat
+    background-size contain
+    z-index -1
+
+  &::before
     top -50px
-    left -30%
+    left -15%
     width 100%
     max-width 650px
     height 100%
     background-image url("../img/first/elements-left.svg")
-    background-repeat no-repeat
     background-position left
-    background-size contain
-    z-index -1
     opacity 0.4
 
   &::after
-    position absolute
-    content ""
     bottom -30px
     left 50%
     width 22px
     height 110px
     transform translate(-50%, 0)
     background-image url("../img/first/scroll.svg")
-    background-repeat no-repeat
     background-position center
-    background-size contain
     opacity 0.5
 
 .intro__info
@@ -74,12 +73,16 @@
   line-height 2.9rem
 
 .intro__illustration
+  display flex
+  align-items center
+  justify-content space-between
   position relative
   width 50%
+  min-width 460px
   background-image url("../img/first/polygon-right.svg")
   background-repeat no-repeat
-  background-position 85px center
-  background-size 65%
+  background-position 88px 57%
+  background-size 330px
 
   &::after
     position absolute
@@ -96,13 +99,29 @@
     background-size contain
     z-index -1
 
-  picture
-    width 100%
-    max-width 562px
+  &-inner
+    transform scale(0.75) translateX(25%)
+    width 390px
 
-  img
-    max-width 658px
+  &-smokebot,
+  &-main,
+  &-smoketop
+    position absolute
+    transform translate(-50%, -50%)
+    max-width 100%
+
+    img
+      max-width 100%
+
+  &-smokebot
+    z-index 10
+
+  &-main
+    z-index 11
     width 100%
+
+  &-smoketop
+    z-index 12
 
 .results
   background-image url("../img/second/results-bg.svg")
@@ -286,7 +305,10 @@
   margin 0 auto 100px
 
   &:last-of-type
-    margin-bottom 0
+    margin-bottom 4rem
+
+.how-it-works__button
+  text-align center
 
 .how-it-works__main
   position relative
@@ -294,6 +316,7 @@
   align-items center
   justify-content space-between
   margin-bottom 100px
+  transform translateX(-30px)
 
   .how-it-works__arrows
     .how-it-works__arrow
@@ -614,6 +637,9 @@
 .faq__title
   max-width 90px
   margin 0 auto 5rem
+
+.faq__hidden-blocks
+  display none
 
 .team
   position relative
