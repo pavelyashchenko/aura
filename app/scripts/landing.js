@@ -192,6 +192,7 @@ const parallaxInit = () => {
 		slidesPerView: 5,
 		spaceBetween: 30,
 		freeMode: true,
+		watchSlidesProgress: true,
 		mousewheel: false,
 		scrollbar: {
 			el: '.swiper-scrollbar',
