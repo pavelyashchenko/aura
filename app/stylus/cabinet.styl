@@ -1,7 +1,6 @@
 @import "base/_global"
 @import "../includes/modules/cabinet/slider-blocks/index.styl"
 
-
 .intro
   background-image url("../img/cabinet/cabinet-bg.webp")
   background-repeat no-repeat
@@ -11,11 +10,11 @@
 .intro__inner
   max-width 1030px
   margin 0 auto
-  padding 275px 15px 190px
+  padding 170px 15px 50px
 
 .intro__top
   display flex
-  align-items flex-start
+  align-items center
   justify-content space-between
   margin-bottom 50px
 
@@ -37,10 +36,20 @@
 
   &-revard
     &-title
+      display flex
+      align-items center
       font-weight 300
       font-size 2.4rem
       line-height 2.9rem
       margin-bottom 17px
+
+    &-summ
+      display block
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      max-width 115px
+      margin-left 10px
 
     &-buttons
       max-width 176px
@@ -86,10 +95,29 @@
       padding-right 20px
 
       li
+        display block
         font-weight 700
         font-size 16px
         line-height 19px
         margin-bottom 10px
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        max-width 73px
+
+        &:last-child
+          margin-bottom 0
+
+      &::-webkit-scrollbar
+        width 5px
+
+      &::-webkit-scrollbar-track
+        background-color #1a1c1f
+        border-radius 10px
+
+      &::-webkit-scrollbar-thumb
+        background-color #276259
+        border-radius 10px
 
 .intro__middle
   display flex
@@ -97,55 +125,49 @@
   justify-content space-between
   margin-bottom 50px
 
-  &-wallet
+  &-field
+    width 25%
+
     &-title
       font-weight 400
       font-size 2rem
       line-height 2.4rem
       margin-bottom 15px
-
+    
     &-main
       display flex
       align-items center
+      width 100%
+      height 35px
+      
+      &:active
+        .field-inner
+          background-color rgba(19, 220, 193, 0.3)
 
-      .wallet-inner
+      .field-inner
         padding 10px 8px 6px 8px
         background-color rgba(19, 220, 193, 0.2)
+        height 100%
 
         span
+          display block
           font-weight 300
           font-size 1.6rem
           line-height 1.9rem
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+          max-width 203px
 
-      .wallet-icon
+      .field-icon
         padding 7px 6px 3px 6px
         background-color #00A18C
+        height 100%
 
-  &-invite
-    &-title
-      font-weight 400
-      font-size 2rem
-      line-height 2.4rem
-      margin-bottom 15px
-
-    &-main
-      display flex
-      align-items center
-
-      .invite-inner
-        padding 10px 8px 6px 8px
-        background-color rgba(19, 220, 193, 0.2)
-
-        span
-          font-weight 300
-          font-size 1.6rem
-          line-height 1.9rem
-
-      .invite-icon
-        padding 7px 6px 3px 6px
-        background-color #00A18C
 
   &-qualification
+    width 25%
+
     &-title
       font-weight 400
       font-size 2rem
@@ -165,6 +187,7 @@
           font-weight 300
           font-size 14px
           line-height 17px
+          margin-right 10px
 
         .first-info
           font-weight 700
@@ -181,6 +204,7 @@
           font-weight 300
           font-size 14px
           line-height 17px
+          margin-right 10px
 
         .second-info
           font-weight 700
@@ -220,9 +244,14 @@
 
         span
           &:first-child
+            display block
             font-weight 700
             font-size 16px
             line-height 19px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+            max-width 73px
 
           &:nth-child(2)
             font-weight 300

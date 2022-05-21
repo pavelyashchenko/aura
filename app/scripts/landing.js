@@ -170,28 +170,28 @@ const modalFaqLink = () => {
 // FAQ Show more button
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
-    $('.faq__hidden-blocks').slideToggle(300);
-    $(this).toggleClass('is-active');
+		$('.faq__hidden-blocks').slideToggle(300);
+		$(this).toggleClass('is-active');
 
-    if ($(this).hasClass('is-active')) {
-      $(this).text('Show less')
-    } else {
-      $(this).text('Learn more')
-    }
+		if ($(this).hasClass('is-active')) {
+			$(this).text('Show less');
+		} else {
+			$(this).text('Learn more');
+		}
 	});
 };
 
 // First screen parallax
 const parallaxInit = () => {
-  var scene = $('#parallax').get(0);
-  var parallaxInstance = new Parallax(scene);
-}
+	var scene = $('#parallax').get(0);
+	var parallaxInstance = new Parallax(scene);
+};
 
 // SLiders
 (function () {
 	var swiper = new Swiper('#price-blocks', {
 		direction: 'horizontal',
-		slidesPerView: 5,
+		slidesPerView: 'auto',
 		grabCursor: true,
 		spaceBetween: 30,
 		freeMode: true,
@@ -204,26 +204,15 @@ const parallaxInit = () => {
 	});
 
 	var swiper2 = new Swiper('#mobile-price-blocks', {
-		slidesPerView: 1.5,
-		spaceBetween: 30,
+		slidesPerView: 'auto',
+		spaceBetween: 15,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-		},
-		breakpoints: {
-			425: {
-				slidesPerView: 2,
-			},
-			640: {
-				slidesPerView: 3,
-			},
-			768: {
-				slidesPerView: 4,
-			},
-		},
+		}
 	});
 
-  // Functions init
+	// Functions init
 	Accordion();
 	setTimeout(function () {
 		grayArow();
@@ -233,6 +222,5 @@ const parallaxInit = () => {
 	}, 1700);
 	modalFaqLink();
 	showMoreFaq();
-  parallaxInit();
-
+	parallaxInit();
 })();

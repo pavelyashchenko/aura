@@ -18,30 +18,21 @@
     &-slider
       max-width 100%
 
+      .swiper
+        overflow visible !important
+
 @media (max-width 768px)
   .intro__inner
-    padding-top 200px
     padding-bottom 120px
 
   .intro__middle
-    &-wallet
+    &-field
       &-title
         font-size 16px
 
       &-main
         .wallet-inner
           padding 13px 8px 9px 8px
-
-    &-invite
-      &-title
-        font-size 16px
-
-      &-main
-        .invite-inner
-          padding 13px 8px 9px 8px
-
-        .invite-icon
-          padding 8px 6px 5px 6px
 
     &-qualification
       &-title
@@ -65,8 +56,19 @@
     flex-direction column
     align-items center
 
-    &-wallet
+    &-field
       margin-bottom 30px
+      width 75%
 
-    &-invite
-      margin-bottom 30px
+      .field-inner
+        width 100%
+
+        span
+          max-width 100%
+          text-align left
+
+    &-qualification
+      width 75%
+
+      .qualification__info
+        max-width 96%

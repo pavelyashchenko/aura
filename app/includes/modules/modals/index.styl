@@ -3,6 +3,7 @@
   backdrop-filter blur(5px)
   border-radius 0 !important
   max-width 506px !important
+  min-height 440px !important
   height 440px !important
 
   &::before
@@ -31,6 +32,7 @@
       align-items center
       justify-content space-between
       height 100%
+      padding 20px !important
 
 .modal
   &-close
@@ -44,9 +46,8 @@
       width 24px
 
 .modal-connect
-  .iziModal-wrap
+  &-inner
     text-align center
-    padding 98px 80px 81px 62px
 
   &-title
     font-weight 400
@@ -92,6 +93,55 @@
 
     a
       color $white
+
+.modal-error
+  &-inner
+    text-align center
+
+  &-title
+    font-weight 400
+    font-size 30px
+    line-height 36px
+    margin-bottom 35px
+
+  &-message
+    font-weight 300
+    font-size 16px
+    line-height 19px
+    max-width 335px
+    margin-bottom 35px
+    text-align left
+
+  &-buttons
+    &-title
+      font-weight 400
+      font-size 20px
+      line-height 24px
+      margin-bottom 15px
+
+    &-inner
+      display flex
+      align-items center
+      justify-content center
+
+    &-agree
+      background-color #00E6AE
+
+      &:hover
+        background-color #02ce9b
+
+    &-cancel
+      background-color transparent
+      border-color #F13131
+      margin-left 18px
+
+      &:hover
+        background-color #F13131
+
+@media (max-width 768px)
+  .button
+    font-size 16px
+    padding 10px 25px
 
 @media (max-width 650px)
   .iziModal

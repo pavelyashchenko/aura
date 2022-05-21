@@ -10,12 +10,12 @@ mixin header()
             ul.header__menu-ul
               each key, value in {"About us": 'about', "Benefits": 'benefits', "Roadmap": 'roadmap', "FAQ": 'faq'}
                 li.header__menu-li
-                  a.header__menu-link.link-underline(href=`#${key}` )= value
+                  a.header__menu-link.link-underline(href=`/#${key}` )= value
 
         .header__right
           .header__button
             if headerButton === "landing"
-              +button(href="#" data-izimodal-open="#modal-connect")
+              +button(type="button" data-izimodal-open="#modal-connect")
                 | Connect wallet
 
             if headerButton === "cabinet"
@@ -58,11 +58,11 @@ mixin header()
           ul.header__menu-ul
             each key, value in {"About us": 'about', "Benefits": 'benefits', "Roadmap": 'roadmap', "FAQ": 'faq'}
               li.header__menu-li
-                a.header__menu-link.link-underline(href=`#${key}` )= value
+                a.header__menu-link(href=`/#${key}` )= value
 
         .header__button
           if headerButton === "landing"
-            +button(href="#" data-izimodal-open="#modal-connect")
+            +button(type="button" data-izimodal-open="#modal-connect")
               | Connect wallet
 
           if headerButton === "cabinet"

@@ -5,16 +5,17 @@ mixin modal-connect(data)
   .modal.modal-connect#modal-connect
     button.modal-close(data-izimodal-close="")
       img(src="img/modals/modal-close-icon.svg", alt="Close")
-    h2.modal-connect-title Connect wallet
-    a.modal-connect-button(href="#" target="_blank")
-      .img
-        img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
-      .info
-        .info__title Metamask
-        .info__message Desktop/ DApp in app
-      
-    p.modal-connect-content
-      | Got questions? <a href="#faq" id="modal-link-faq">Go to FAQ</a>
+    .modal-connect-inner
+      h2.modal-connect-title Connect wallet
+      a.modal-connect-button(href="#" target="_blank")
+        .img
+          img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
+        .info
+          .info__title Metamask
+          .info__message Desktop/ DApp in app
+        
+      p.modal-connect-content
+        | Got questions? <a href="#faq" id="modal-link-faq">Go to FAQ</a>
 
 mixin modal-error(data)
   //- -
@@ -23,14 +24,13 @@ mixin modal-error(data)
   .modal.modal-error#modal-error
     button.modal-close(data-izimodal-close="")
       img(src="img/modals/modal-close-icon.svg", alt="Close")
-    h2.modal-error-title Connect wallet
-    button.modal-error-button
-      .img
-        img(src="img/icons/metamask-fox.svg", alt="Metamask Fox")
-      .info
-        .info__title Metamask
-        .info__message Desktop/ DApp in app
-      
-    p.modal-error-content
-      | Got questions? <a href="#faq">Go to FAQ</a>
+    .modal-error-inner
+      h2.modal-error-title Tittle error
+      p.modal-error-message
+        | Contrary to&nbsp;popular belief, Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece of&nbsp;classical Latin literature from 45&nbsp;BC, making it&nbsp;over 2000 years old. Richard McClintock, a&nbsp;Latin professor at&nbsp;Hampden-Sydney College in&nbsp;Virginia, looked up&nbsp;one of&nbsp;the more obscure
+      .modal-error-buttons
+        h4.modal-error-buttons-title Are you sure you want to continue?
+        .modal-error-buttons-inner
+          +button(type="button").modal-error-buttons-agree Yes
+          +button(type="button" data-izimodal-close="").modal-error-buttons-cancel Cancel
 

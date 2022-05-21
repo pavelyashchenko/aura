@@ -20,14 +20,15 @@ block main
     .intro__inner
       .intro__top
         .intro__top-image
-          img(src="/", alt="Avatar")
+          img(src="https://html5css.ru/howto/img_avatar.png", alt="Avatar")
 
         .intro__top-revard
-          h4.intro__top-revard-title Reward: 0.625 BNB
+          h4.intro__top-revard-title Reward:
+            span.intro__top-revard-summ(title="0.6252424 BNB") 0.6252424 BNB
           .intro__top-revard-buttons
-            +button(href="#")
+            +button(href="#" data-izimodal-open="#modal-error")
               | Mint
-            +button(href="#")
+            +button(href="#" data-izimodal-open="#modal-error")
               | Withdraw
         
         .intro__top-invited
@@ -36,30 +37,30 @@ block main
             span Invited:
           
           ul.intro__top-invited-right
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
-            li 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
+            li(title="0x0 .. fde4") 0x0 .. fde4
 
       .intro__middle
-        .intro__middle-wallet
-          h4.intro__middle-wallet-title My wallet
-          button.intro__middle-wallet-main
-            .wallet-inner
+        .intro__middle-field.intro__middle--wallet
+          h4.intro__middle-field-title My wallet:
+          button.intro__middle-field-main
+            .field-inner
               span 0x2598763 .. Dft157dfe589w
-            .wallet-icon
+            .field-icon
               img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
 
-        .intro__middle-invite
-          h4.intro__middle-invite-title My wallet
-          button.intro__middle-invite-main
-            .invite-inner
+        .intro__middle-field.intro__middle--invite
+          h4.intro__middle-field-title Link for invitation:
+          button.intro__middle-field-main
+            .field-inner
               span 0x2598763 .. Dft157dfe589w
-            .invite-icon
+            .field-icon
               img(src="img/cabinet/copy-icon.svg", alt="copy icon")
 
         .intro__middle-qualification
@@ -70,42 +71,42 @@ block main
               .first-info YES
             .qualification__info-second
               .second-title AUTO: 
-              .second-info TURBO
+              button(data-izimodal-open="#modal-error").second-info TURBO
 
       .intro__bottom
         .intro__bottom-mint
           h4.mint-title Mint NFT
 
           .mint-blocks
-            .mint-block.mint-block--green
-              span 0.125
+            a.mint-block.mint-block--green(href="#")
+              span(title="0.125") 0.125
               span BNB
-            .mint-block.mint-block--green
-              span 0.25
+            a.mint-block.mint-block--green(href="#")
+              span(title="0.25") 0.25
               span BNB
-            .mint-block.mint-block--orange
-              span 0.5
+            a.mint-block.mint-block--orange(href="#")
+              span(title="0.5") 0.5
               span BNB
-            .mint-block
-              span 1
+            a.mint-block(href="#")
+              span(title="1") 1
               span BNB
-            .mint-block
-              span 2
+            a.mint-block(href="#")
+              span(title="2") 2
               span BNB
-            .mint-block
-              span 4
+            a.mint-block(href="#")
+              span(title="4") 4
               span BNB
-            .mint-block
-              span 8
+            a.mint-block(href="#")
+              span(title="8") 8
               span BNB
-            .mint-block
-              span 16
+            a.mint-block(href="#")
+              span(title="16") 16
               span BNB
-            .mint-block
-              span 32
+            a.mint-block(href="#")
+              span(title="32") 32
               span BNB
-            .mint-block
-              span 64
+            a.mint-block(href="#")
+              span(title="64") 64
               span BNB
 
         .intro__bottom-slider
