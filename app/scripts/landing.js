@@ -181,15 +181,18 @@ const showMoreFaq = () => {
 	});
 };
 
+// First screen parallax
 const parallaxInit = () => {
   var scene = $('#parallax').get(0);
   var parallaxInstance = new Parallax(scene);
 }
 
+// SLiders
 (function () {
 	var swiper = new Swiper('#price-blocks', {
 		direction: 'horizontal',
 		slidesPerView: 5,
+		grabCursor: true,
 		spaceBetween: 30,
 		freeMode: true,
 		watchSlidesProgress: true,
@@ -220,7 +223,7 @@ const parallaxInit = () => {
 		},
 	});
 
-  
+  // Functions init
 	Accordion();
 	setTimeout(function () {
 		grayArow();

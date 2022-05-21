@@ -1,4 +1,5 @@
 (function () {
+  // Fixed header
   (function fixedHeader() {
     $(window).scroll(function(){
       if ($(this).scrollTop() > 50) {
@@ -9,13 +10,15 @@
     });
   })();
 
+  // Burger menu mobile
   (function mobileMenu() {
-    $(".header__burger-button").on("click", function() {
+    $(".header__burger-button .plates").on("click", function() {
       $(".header__mobile").toggleClass("is-active");
       $("body").toggleClass("scroll-block");
     });
   })();
 
+  // Scripts init
 	new WOW().init();
   $(".modal").iziModal();
 })();

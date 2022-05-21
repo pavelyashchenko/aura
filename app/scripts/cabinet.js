@@ -1,8 +1,10 @@
 (function() {
+  // SLiders
   var swiper = new Swiper(".carousel-cabinet-blocks", {
     direction: "horizontal",
     slidesPerView: 2,
     spaceBetween: 30,
+    grabCursor: true,
     freeMode: true,
     mousewheel: true,
     scrollbar: {
