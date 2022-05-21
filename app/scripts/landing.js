@@ -200,6 +200,7 @@ const parallaxInit = () => {
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			hide: false,
+			draggable: true
 		},
 	});
 
