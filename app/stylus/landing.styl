@@ -29,7 +29,6 @@
   align-items center
   justify-content space-between
   max-width 1250px
-  min-height 600px
   padding 14rem 15px 15rem
   margin 0 auto
 
@@ -64,6 +63,7 @@
 .intro__info
   max-width 526px
   width 50%
+  padding-top 115px
 
 .intro__title
   margin-bottom 5px
@@ -74,17 +74,8 @@
   line-height 2.9rem
 
 .intro__illustration
-  display flex
-  align-items center
-  justify-content space-between
-  position relative
-  width 50%
-  min-width 460px
-  height 380px
-  background-image url("../img/first/polygon-right.svg")
-  background-repeat no-repeat
-  background-position 88px 57%
-  background-size 330px
+  width 500px
+  height 300px
 
   &::after
     position absolute
@@ -101,35 +92,33 @@
     background-size contain
     z-index -1
 
-  &-inner
-    transform scale(0.75) translateX(25%)
-    width 390px
-
+  &-lines,
   &-smokebot,
   &-main,
   &-smoketop
-    position absolute
-    transform translate(-50%, -50%)
-    max-width 100%
+    width 400px
+    height 400px
+    background-repeat no-repeat
+    background-position center
+    background-size contain
 
-    img
-      max-width 100%
-
+  &-lines
+    height 155%
+    top -10% !important
+    background-image url("../img/first/polygon-right.svg")
+  
   &-smokebot
-    z-index 10
+    background-image url("../img/first/smoke-bottom.png")
+    height 140%
 
   &-main
-    z-index 11
-    width 100%
+    background-image url("../img/first/nft-viz.webp")
+    opacity .8
 
   &-smoketop
-    z-index 12
-    top -100px !important
-    left -100px !important
-
-    img
-      max-width 150% !important
-      width 150% !important
+    background-image url("../img/first/smoke-top.png")
+    height 120%
+  
 
 .results
   background-image url("../img/second/results-bg.svg")

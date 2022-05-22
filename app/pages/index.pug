@@ -27,47 +27,11 @@ block main
         p.intro__message
           | It&nbsp;is&nbsp;a&nbsp;system that uses the SMART algorithm with NFT elements. The essence of&nbsp;the project is&nbsp;passive income by&nbsp;buying AURA-Pass and attracting referrals.
 
-      .intro__illustration.wow.fadeInRight
-        .intro__illustration-inner
-          #parallax
-            .intro__illustration-smokebot(data-depth="2")
-              +picture({
-                lazy: false,
-                path: "img/first/smoke-bottom.png",
-                attr: { "alt": "NFT" },
-                mainAttr: {
-                  "class": "wow fadeIn",
-                  "data-wow-duration": "2s",
-                  "data-wow-offset": "10",
-                  "data-wow-delay": ".2s"
-                  }
-              })
-
-            .intro__illustration-main(data-depth="0.5")
-              +picture({
-                lazy: false,
-                path: "img/first/nft-viz.png",
-                attr: { "alt": "NFT" },
-                mainAttr: {
-                  "class": "wow fadeIn",
-                  "data-wow-duration": "2s",
-                  "data-wow-offset": "10",
-                  "data-wow-delay": ".2s"
-                  }
-              })
-
-            .intro__illustration-smoketop(data-depth="1.5")
-              +picture({
-                lazy: false,
-                path: "img/first/smoke-top.png",
-                attr: { "alt": "NFT" },
-                mainAttr: {
-                  "class": "wow fadeIn",
-                  "data-wow-duration": "2s",
-                  "data-wow-offset": "10",
-                  "data-wow-delay": ".2s"
-                  }
-              })
+      .intro__illustration.wow.fadeInRight#parallax
+        .intro__illustration-lines(data-depth="0.7")
+        .intro__illustration-smokebot(data-depth="3")
+        .intro__illustration-main(data-depth="0.5")
+        .intro__illustration-smoketop(data-depth="1.5")
 
   section.results#results.wow.fadeInDown(data-wow-delay=".2s")
     .results__inner
