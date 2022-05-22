@@ -158,7 +158,9 @@ const yellowArrowSecond = () => {
 
 // Modal FAQ Link
 const modalFaqLink = () => {
-	$('#modal-link-faq').on('click', function () {
+	$('#modal-link-faq').on('click', function (e) {
+		e.preventDefault();
+
 		$('html, body').animate({
 			scrollTop: $('#faq').offset().top,
 		});
