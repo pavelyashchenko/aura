@@ -6,10 +6,9 @@
 
 .header__desktop
   padding 40px 15px 0 15px
-  transition padding .5s, box-shadow .5s
-  
+  transition padding 0.5s, box-shadow 0.5s
+
   &.is-fixed
-    // background-color $bg
     padding 1rem 15px
     box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
     backdrop-filter blur(16px)
@@ -30,21 +29,12 @@
     margin-right 4rem
 
     img
-      max-width 140px
+      width 200px
 
   .header__menu
     &-ul
       display flex
       align-items center
-      position relative
-
-      &::before
-        position absolute
-        left -5px
-        content ""
-        height 100%
-        width 1px
-        background-color $text
 
     &-li
       padding 0 2.3rem
@@ -59,11 +49,21 @@
     margin-right 4rem
 
   .header__icons
+    display flex
+    align-items center
+
+    &-follow
+      font-weight 300
+      font-size 16px
+      line-height 19px
+      color #547C7B
+      margin-right 10px
+
     &-item
       transition all 0.3s
 
-      &:not(:first-child)
-        margin-left 1.5rem
+      &:not(:last-child)
+        margin-right 1rem
 
       &:hover
         transform scale(1.2)
@@ -84,7 +84,9 @@
     max-width 650px
     margin 0 auto
     z-index 100
-    transition top .3s, box-shadow .5s
+    transition top 0.3s, box-shadow 0.5s
+    overflow hidden
+    height 60px
 
     .header__logo
       img
@@ -110,11 +112,12 @@
         width 80px
 
       .burger
-        filter url(#gooeyness)
+        filter url("#gooeyness")
 
       .x
         transform scale(0)
         transition transform 400ms
+
         .line
           stroke-width 5.5px
 
@@ -131,35 +134,46 @@
         .x
           transform scale(1)
           transition transform 400ms 350ms
+
         &.plate5
           .line
             transition stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms
+
           .line1
             stroke-dasharray 1 40
             stroke-dashoffset -33px
+
           .line2
             stroke-dasharray 5 39
             stroke-dashoffset -37px
+
           .line3
             stroke-dasharray 5 39
             stroke-dashoffset -37px
+
           .line4
             stroke-dasharray 1 40
             stroke-dashoffset -33px
+
           .x
             transition transform 400ms 50ms
 
       .plate5
         .line
           transition stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms
+
         .line1
           stroke-dasharray 40 40
+
         .line2
           stroke-dasharray 21 39
+
         .line3
           stroke-dasharray 21 39
+
         .line4
           stroke-dasharray 40 40
+
         .x
           transition transform 400ms 50ms
 
@@ -175,7 +189,7 @@
     width 100%
     background-color $bg
     z-index 99
-    transition top .5s, visibility .5s
+    transition top 0.5s, visibility 0.5s
     visibility hidden
 
     .header__menu
@@ -203,7 +217,7 @@
         padding 9px 20px
 
     .header__icons
-       &-item
+      &-item
         transition all 0.3s
 
         &:not(:first-child)
@@ -228,11 +242,12 @@
         box-shadow none
         backdrop-filter none
 
-@media(max-width: 1024px)
+@media (max-width 1024px)
   .header__desktop
     .header__logo
       img
-        max-width 100px
+        width 150px
+
     .header__menu
       &-li
         padding 0 1.5rem
@@ -240,13 +255,17 @@
       &-link
         font-size 12px
 
-@media(max-width: 768px)
+    .header__icons
+      &-follow
+        font-size 14px
+
+@media (max-width 768px)
   .header__desktop
     .header__logo
       margin-right 3rem
 
-        img
-          max-width 80px
+      img
+        width 120px
 
     .header__button
       margin-right 2rem
@@ -257,7 +276,7 @@
           width 20px
           height 20px
 
-@media(max-width: 650px)
+@media (max-width 650px)
   .header__desktop
     display none
 

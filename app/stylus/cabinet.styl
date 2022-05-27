@@ -2,10 +2,7 @@
 @import "../includes/modules/cabinet/slider-blocks/index.styl"
 
 .intro
-  background-image url("../img/cabinet/cabinet-bg.webp")
-  background-repeat no-repeat
-  background-position center
-  background-size cover
+  background radial-gradient(800px 570px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
 
 .intro__inner
   max-width 1030px
@@ -18,204 +15,252 @@
   justify-content space-between
   margin-bottom 50px
 
-  &-image
-    display flex
-    align-items center
-    justify-content space-between
-    width 100%
-    max-width 200px
-    height 222px
-    background rgba(135, 217, 206, 0.05)
-    clip-path polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  &-left
+    margin-right 50px
 
-    img
-      max-width 200px
-      width 100%
-      height 100%
-      object-fit cover
-
-  &-revard
-    &-title
-      display flex
-      align-items center
-      font-weight 300
-      font-size 2.4rem
-      line-height 2.9rem
-      margin-bottom 17px
-
-    &-summ
-      display block
-      white-space nowrap
-      overflow hidden
-      text-overflow ellipsis
-      max-width 115px
-      margin-left 10px
-
-    &-buttons
-      max-width 176px
+    .nft
+      background-color rgba(30, 30, 34, 0.4)
+      padding 20px 35px
+      clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
       text-align center
+      margin-bottom 45px
 
-      .button
-        width 100%
-
-        &:first-child
-          margin-bottom 14px
-
-  &-invited
-    display flex
-    align-items center
-    justify-content space-between
-    padding 2.6rem 1.9rem 3.2rem 2.4rem
-    background-image url("../img/cabinet/invited-bg.svg")
-    background-repeat no-repeat
-    background-position center
-    background-size contain
-
-    &-left
-      margin-right 35px
-
-      span
-        display block
-
-        &:first-child
-          font-weight 700
-          font-size 5rem
-          line-height 6rem
-          letter-spacing 0.035em
-          color #20EEBC
-
-        &:nth-child(2)
-          font-weight 300
-          font-size 2rem
-          line-height 2.4rem
-
-    &-right
-      height 130px
-      overflow-y auto
-      padding-right 20px
-
-      li
-        display block
+      &__title
         font-weight 700
+        font-size 20px
+        line-height 24px
+        text-shadow 0px 1px 4px #14CEAC
+        letter-spacing 0.035em
+        margin-bottom 25px
+
+      &__inner
+        width 165px
+        margin-bottom 35px
+        text-align left
+
+      &__li
+        font-weight 300
         font-size 16px
         line-height 19px
-        margin-bottom 10px
+        color rgba(255, 255, 255, 0.8)
         white-space nowrap
         overflow hidden
         text-overflow ellipsis
-        max-width 73px
+        max-width 165px
 
-        &:last-child
-          margin-bottom 0
+        &:not(:last-child)
+          margin-bottom 12px
 
-      &::-webkit-scrollbar
-        width 5px
+      &__all
+        font-weight 500
+        font-size 16px
+        line-height 19px
+        background-color rgba(19, 220, 193, 0.2)
+        padding 10px 20px
+        clip-path polygon(10% 0, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0 80%, 0 20%)
+        transition background-color 0.1s
 
-      &::-webkit-scrollbar-track
-        background-color #1a1c1f
-        border-radius 10px
+        &:hover
+          background-color rgba(19, 220, 193, 0.4)
 
-      &::-webkit-scrollbar-thumb
-        background-color #276259
-        border-radius 10px
+    .qualification
+      width 120px
+      margin 0 auto
 
-.intro__middle
-  display flex
-  align-items flex-start
-  justify-content space-between
-  margin-bottom 50px
+      &__title
+        font-weight 400
+        font-size 2rem
+        line-height 2.4rem
+        margin-bottom 15px
 
-  &-field
-    width 25%
+      &__info
+        max-width 180px
 
-    &-title
-      font-weight 400
-      font-size 2rem
-      line-height 2.4rem
-      margin-bottom 15px
-    
-    &-main
+        &-first
+          display flex
+          align-items center
+          justify-content space-between
+          margin-bottom 10px
+          width 100px
+
+          .first-title
+            font-weight 300
+            font-size 14px
+            line-height 17px
+            margin-right 10px
+
+          .first-info
+            font-weight 700
+            font-size 14px
+            line-height 17px
+            color #20EEBC
+
+        &-second
+          display flex
+          align-items center
+          justify-content space-between
+
+          .turbo
+            font-weight 700
+            font-size 14px
+            line-height 17px
+            color $white
+            background-color #F13131
+            border-radius 38px
+            padding 3px 10px
+            transition background-color 0.1s
+
+            &:hover
+              background-color #d62e2e
+
+  &-right
+    max-width 620px
+    width 100%
+
+    .top
       display flex
       align-items center
-      width 100%
-      height 35px
-      
-      &:active
-        .field-inner
-          background-color rgba(19, 220, 193, 0.3)
+      justify-content space-between
+      margin-bottom 65px
 
-      .field-inner
-        padding 10px 8px 6px 8px
-        background-color rgba(19, 220, 193, 0.2)
-        height 100%
+      .field
+        &__title
+          font-weight 400
+          font-size 2rem
+          line-height 2.4rem
+          margin-bottom 15px
 
-        span
-          display block
+        &__main
+          display flex
+          align-items center
+          width 100%
+          height 35px
+
+          &:active
+            .field__inner
+              background-color rgba(19, 220, 193, 0.3)
+
+          .field__inner
+            padding 10px 8px 6px 8px
+            background-color rgba(19, 220, 193, 0.2)
+            height 100%
+            width 227px
+
+            span
+              display block
+              font-weight 300
+              font-size 1.6rem
+              line-height 1.9rem
+              white-space nowrap
+              overflow hidden
+              text-overflow ellipsis
+              text-align left
+
+          .field__icon
+            padding 7px 6px 3px 6px
+            background-color #00A18C
+            height 100%
+
+    .bottom
+      display flex
+      align-items center
+      justify-content space-between
+
+      .reward
+        &__title
+          display flex
+          align-items center
           font-weight 300
-          font-size 1.6rem
-          line-height 1.9rem
+          font-size 2.4rem
+          line-height 2.9rem
+          margin-bottom 17px
+          color rgba(255, 255, 255, 0.7)
+
+        &__reward
+          display block
+          font-weight 500
           white-space nowrap
           overflow hidden
           text-overflow ellipsis
-          max-width 203px
+          max-width 115px
+          margin-left 10px
 
-      .field-icon
-        padding 7px 6px 3px 6px
-        background-color #00A18C
-        height 100%
+        &__buttons
+          max-width 176px
+          text-align center
+          margin 0 auto
 
+          .button
+            width 100%
 
-  &-qualification
-    width 25%
+            &:first-child
+              margin-bottom 14px
 
-    &-title
-      font-weight 400
-      font-size 2rem
-      line-height 2.4rem
-      margin-bottom 15px
-
-    .qualification__info
-      max-width 180px
-
-      &-first
+      .invited
         display flex
         align-items center
         justify-content space-between
-        margin-bottom 7px
+        padding 2.6rem 1.9rem 3.2rem 2.4rem
+        background-color rgba(30, 30, 34, 0.4)
+        clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
+        max-width 310px
+        width 100%
 
-        .first-title
-          font-weight 300
-          font-size 14px
-          line-height 17px
-          margin-right 10px
+        &__left
+          margin-right 25px
 
-        .first-info
-          font-weight 700
-          font-size 14px
-          line-height 17px
-          color #20EEBC
+          span
+            display block
 
-      &-second
-        display flex
-        align-items center
-        justify-content space-between
+            &:first-child
+              font-weight 700
+              font-size 5rem
+              line-height 6rem
+              letter-spacing 0.035em
+              color #20EEBC
 
-        .second-title
-          font-weight 300
-          font-size 14px
-          line-height 17px
-          margin-right 10px
+            &:nth-child(2)
+              font-weight 300
+              font-size 2rem
+              line-height 2.4rem
 
-        .second-info
-          font-weight 700
-          font-size 14px
-          line-height 17px
-          color #F13131
+        &__right
+          height auto
+          max-height 130px
+          overflow-y auto
+          padding-right 15px
+          max-width 178px
+          width 100%
 
-.intro__bottom
+          li
+            display block
+            font-weight 700
+            font-size 16px
+            line-height 19px
+            margin-bottom 10px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+
+            &:last-child
+              margin-bottom 0
+
+          &::-webkit-scrollbar
+            width 5px
+
+          &::-webkit-scrollbar-track
+            background-color #1a1c1f
+            border-radius 10px
+
+          &::-webkit-scrollbar-thumb
+            background-color #276259
+            border-radius 10px
+
+.intro__middle
   display flex
   align-items center
   justify-content space-between
+  margin-bottom 100px
 
   &-mint
     .mint-title
@@ -228,7 +273,7 @@
     .mint-blocks
       display flex
       flex-wrap wrap
-      width 100%
+      width 350px
       max-height 370px
       margin -6.5px -9px
 
@@ -265,5 +310,17 @@
         &--orange
           background-color #8F7000
           border-color transparent
+
+.intro__bottom
+  &-inner
+    display flex
+    align-items center
+    justify-content center
+
+  &-text
+    font-weight 300
+    font-size 20px
+    line-height 24px
+    margin-right 15px
 
 @import "media/_media-cabinet.styl"

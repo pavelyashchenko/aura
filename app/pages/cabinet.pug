@@ -19,62 +19,69 @@ block main
   section.intro
     .intro__inner
       .intro__top
-        .intro__top-image
-          img(src="https://html5css.ru/howto/img_avatar.png", alt="Avatar")
+        .intro__top-left
+          .nft
+            h4.nft__title Your NFT
+            ul.nft__inner
+              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 50
+              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 100
+              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 200
+            button.nft__all Watch all
 
-        .intro__top-revard
-          h4.intro__top-revard-title Reward:
-            span.intro__top-revard-summ(title="0.6252424 BNB") 0.6252424 BNB
-          .intro__top-revard-buttons
-            +button(href="#" data-izimodal-open="#modal-error")
-              | Mint
-            +button(href="#" data-izimodal-open="#modal-error")
-              | Withdraw
-        
-        .intro__top-invited
-          .intro__top-invited-left 
-            span 16
-            span Invited:
-          
-          ul.intro__top-invited-right
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
-            li(title="0x0 .. fde4") 0x0 .. fde4
+          .qualification
+            h4.qualification__title Qualification
+            .qualification__info
+              .qualification__info-first
+                .first-title STATUS: 
+                .first-info YES
+              .qualification__info-second
+                button(data-izimodal-open="#modal-error").turbo Buy Turbo
+
+        .intro__top-right
+          .top
+            .field.field--wallet
+              h4.field__title My wallet:
+              button.field__main
+                .field__inner
+                  span 0x2598763 .. Dft157dfe589w
+                .field__icon
+                  img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
+
+            .field.field--invite
+              h4.field__title Link for invitation:
+              button.field__main
+                .field__inner
+                  span https://your-site.io/RefID
+                .field__icon
+                  img(src="img/cabinet/copy-icon.svg", alt="copy icon")
+
+          .bottom
+            .reward
+              h4.reward__title Balance:
+                span.reward__reward(title="0.425 BNB") 0.425 BNB
+              h4.reward__title Reward:
+                span.reward__reward(title="0.625 BNB") 0.625 BNB
+              .reward__buttons
+                +button(href="#" data-izimodal-open="#modal-error")
+                  | Withdraw
+            
+            .invited
+              .invited__left 
+                span 16
+                span Invited:
+              
+              ul.invited__right
+                li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm
+                li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
 
       .intro__middle
-        .intro__middle-field.intro__middle--wallet
-          h4.intro__middle-field-title My wallet:
-          button.intro__middle-field-main
-            .field-inner
-              span 0x2598763 .. Dft157dfe589w
-            .field-icon
-              img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
-
-        .intro__middle-field.intro__middle--invite
-          h4.intro__middle-field-title Link for invitation:
-          button.intro__middle-field-main
-            .field-inner
-              span 0x2598763 .. Dft157dfe589w
-            .field-icon
-              img(src="img/cabinet/copy-icon.svg", alt="copy icon")
-
-        .intro__middle-qualification
-          h4.intro__middle-qualification-title Qualification
-          .qualification__info
-            .qualification__info-first
-              .first-title STATUS: 
-              .first-info YES
-            .qualification__info-second
-              .second-title AUTO: 
-              button(data-izimodal-open="#modal-error").second-info TURBO
-
-      .intro__bottom
-        .intro__bottom-mint
+        .intro__middle-mint
           h4.mint-title Mint NFT
 
           .mint-blocks
@@ -109,7 +116,7 @@ block main
               span(title="64") 64
               span BNB
 
-        .intro__bottom-slider
+        .intro__middle-slider
            +cabinet-blocks({
               list: [
                 {
@@ -163,5 +170,11 @@ block main
                 },
               ]
             })
+        
+      .intro__bottom
+        .intro__bottom-inner
+          p.intro__bottom-text System powered by
+          .intro__bottom-logo
+            img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
 
   +modal-error()

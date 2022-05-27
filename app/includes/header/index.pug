@@ -23,7 +23,8 @@ mixin header()
                 | Back to Lobby
 
           .header__icons
-            each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/facebook.svg': 'Facebook', 'img/icons/discord.svg': 'Discord', 'img/icons/post.svg': 'Post'}
+            span.header__icons-follow Follow Us:
+            each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/post.svg': 'Post'}
               a.header__icons-item(href="#" target="_blank")
                 img(src=value, alt=key)
 
@@ -70,6 +71,6 @@ mixin header()
               | Back to Lobby
 
         .header__icons
-          each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/facebook.svg': 'Facebook', 'img/icons/discord.svg': 'Discord', 'img/icons/post.svg': 'Post'}
+          each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/post.svg': 'Post'}
             a.header__icons-item(href="#" target="_blank")
               img(src=value, alt=key)
