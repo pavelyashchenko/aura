@@ -21,6 +21,34 @@
       .swiper
         overflow visible !important
 
+@media (max-width 850px)
+  .intro__top
+    align-items flex-start
+
+    &-right
+      .top
+        align-items flex-start
+        flex-direction column
+
+        .field
+          max-width 100%
+          width 100%
+
+          &--wallet
+            margin-right 0
+
+          &__main
+            .field__inner
+              max-width 100%
+              width 100%
+
+              span
+                max-width 470px
+                width 100%
+
+      .bottom
+        flex-direction column
+
 @media (max-width 768px)
   .intro__inner
     padding-bottom 120px
