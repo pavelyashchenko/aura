@@ -7,11 +7,21 @@ mixin cabinet-blocks(data)
       each block in blocks
         .swiper-slide
           .cabinet__blocks-wrapper(class=`cabinet-block--${block.type}`)
-            .cabinet__blocks-wrapper-inner
-              .cabinet__blocks-text
-                span= block.summ
-                span= block.currency
-              .cabinet__blocks-percentage
-                span= block.percent
-              +button(type="button" data-izimodal-open="#modal-error")= block.button
+            if (block.type === "button")
+              .cabinet__blocks-wrapper-inner
+                .cabinet__blocks-wrapper-fill
+                  .blocks-fill
+                .cabinet__blocks-text
+                  span= block.summ
+                  span= block.currency
+                .cabinet__blocks-percentage
+                  span= block.percent
+                    | %
+                +button(type="button" data-izimodal-open="#modal-error")= block.button
+
+            if (block.type === "simple")
+              .cabinet__blocks-wrapper-inner
+                .cabinet__blocks-text
+                  span= block.summ
+                  span= block.currency
     .swiper-scrollbar
