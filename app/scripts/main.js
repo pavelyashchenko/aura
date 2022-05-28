@@ -21,6 +21,7 @@
   // Scripts init
 	new WOW().init();
   $(".modal").iziModal({
-    transitionIn: 'fadeInDown'
+    transitionIn: 'fadeInDown',
+    bodyOverflow: true
   });
 })();

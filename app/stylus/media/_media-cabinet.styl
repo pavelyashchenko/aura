@@ -1,26 +1,3 @@
-@media (max-width 1024px)
-  .intro__bottom
-    &-slider
-      max-width 590px
-
-@media (max-width 915px)
-  .intro__bottom
-    flex-direction column
-    align-items center
-
-    .mint-title
-      text-align center
-
-    .mint-blocks
-      justify-content center
-      margin-bottom 50px
-
-    &-slider
-      max-width 100%
-
-      .swiper
-        overflow visible !important
-
 @media (max-width 850px)
   .intro__top
     align-items flex-start
@@ -34,8 +11,12 @@
           max-width 100%
           width 100%
 
+          .field__title
+            margin-bottom 5px
+
           &--wallet
             margin-right 0
+            margin-bottom 20px
 
           &__main
             .field__inner
@@ -46,25 +27,53 @@
                 max-width 470px
                 width 100%
 
-      .bottom
-        flex-direction column
-
 @media (max-width 768px)
   .intro__inner
     padding-bottom 120px
 
+  .intro__top
+    &-right
+      .bottom
+        flex-direction column
+
+        .reward
+          margin-right 0
+          order 2
+
+        .invited
+          margin-bottom 20px
+
+          &__right
+            max-width 359px
+
+            li
+              max-width 310px
+
   .intro__middle
-    &-field
-      &-title
-        font-size 16px
+    flex-direction column
+    align-items center
 
-      &-main
-        .wallet-inner
-          padding 13px 8px 9px 8px
+    .mint-title
+      text-align center
 
-    &-qualification
-      &-title
-        font-size 16px
+    .mint-blocks
+      justify-content center
+
+    &-mint
+      margin-right 0
+
+      .mint-blocks
+        margin 0 0 50px 0
+        width 100%
+
+        .mint-block
+          width 43%
+
+    &-slider
+      max-width 100%
+
+      .swiper
+        overflow visible !important
 
 @media (max-width 650px)
   .intro__inner
@@ -74,29 +83,25 @@
     flex-direction column
     align-items center
 
-    &-image
+    &-left
+      display flex
+      align-items center
+      margin-right 0
       margin-bottom 50px
 
-    &-revard
-      margin-bottom 50px
+      .nft
+        margin-bottom 0
+        margin-right 30px
 
   .intro__middle
     flex-direction column
     align-items center
 
-    &-field
-      margin-bottom 30px
-      width 75%
+@media (max-width 425px)
+  .intro__top
+    &-left
+      flex-direction column
 
-      .field-inner
-        width 100%
-
-        span
-          max-width 100%
-          text-align left
-
-    &-qualification
-      width 75%
-
-      .qualification__info
-        max-width 96%
+      .nft
+        margin-bottom 30px
+        margin-right 0

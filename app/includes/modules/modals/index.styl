@@ -34,6 +34,10 @@
       height 100%
       padding 20px !important
 
+html.iziModal-isAttached,
+html.iziModal-isOverflow
+  overflow visible
+
 .modal
   &-close
     position absolute
@@ -137,6 +141,45 @@
 
       &:hover
         background-color #F13131
+
+.modal-nft
+  &-title
+    font-weight 400
+    font-size 30px
+    line-height 36px
+    margin-bottom 20px
+    text-align center
+
+  &-ul
+    max-height 250px
+    height 100%
+    width 100%
+    overflow auto
+    margin-bottom 30px
+    padding-right 20px
+
+  &-li
+    font-weight 300
+    font-size 2.2rem
+    line-height 3rem
+    color rgba(255, 255, 255, 0.8)
+
+    &:not(:last-child)
+      margin-bottom 15px
+
+      span
+        color $white
+        font-weight 500
+
+  &-questions
+    font-weight 300
+    font-size 20px
+    line-height 24px
+    color #1D1E21
+    text-align center
+
+    a
+      color $white
 
 @media (max-width 768px)
   .button

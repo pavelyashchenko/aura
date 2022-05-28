@@ -26,7 +26,7 @@ block main
               li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 50
               li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 100
               li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 200
-            button.nft__all Watch all
+            button(data-izimodal-open="#modal-nft").nft__all Watch all
 
           .qualification
             h4.qualification__title Qualification
@@ -109,12 +109,6 @@ block main
             a.mint-block(href="#")
               span(title="16") 16
               span BNB
-            a.mint-block(href="#")
-              span(title="32") 32
-              span BNB
-            a.mint-block(href="#")
-              span(title="64") 64
-              span BNB
 
         .intro__middle-slider
            +cabinet-blocks({
@@ -178,3 +172,4 @@ block main
             img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
 
   +modal-error()
+  +modal-nft()
