@@ -10,7 +10,7 @@ mixin cabinet-blocks(data)
             if (block.type === "button")
               .cabinet__blocks-wrapper-inner
                 .cabinet__blocks-wrapper-fill
-                  .blocks-fill
+                  .blocks-fill(style=`height: ${block.fill}%;`)
                 .cabinet__blocks-text
                   span= block.summ
                   span= block.currency

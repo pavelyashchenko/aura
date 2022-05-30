@@ -39,24 +39,24 @@
   background-repeat no-repeat
   background-position center 13px
 
-// .cabinet__blocks-wrapper-fill
-//   position absolute
-//   top 5px
-//   bottom 5px
-//   left 5px
-//   right 5px
-//   clip-path polygon(50% 0px,125px 37px,125px 268px,50% 304px,0 268px,0 37px)
-//   z-index -2
+.cabinet__blocks-wrapper-fill
+  position absolute
+  top 5px
+  bottom 5px
+  left 5px
+  right 5px
+  clip-path polygon(50% 0,135px 41px,135px 278px,50% 318px,0 280px,0 39px)
+  z-index -2
 
-//   .blocks-fill
-//     position absolute
-//     content ''
-//     bottom 0
-//     left 0
-//     right 0
-//     height 100%
-//     width 100%
-//     background-image linear-gradient(0deg, rgba(0, 214, 175, 0.3) 12.74%, rgba(0, 214, 175, 0.3) 36.1%, rgba(44, 163, 147, 0) 50%)
+  .blocks-fill
+    position absolute
+    content ''
+    bottom 0
+    left 0
+    right 0
+    height 100%
+    width 100%
+    background-image linear-gradient(0deg, rgba(0, 214, 175, 0.5) 10%, rgba(0, 214, 175, 0.5) 30%, rgba(44, 163, 147, 0.5) 50%, rgba(44, 163, 147, 0.5) 70%, rgba(44, 163, 147, 0.02) 100%)
 
 .cabinet__blocks-text
   & span
@@ -85,3 +85,7 @@
 
 .swiper-wrapper
   margin-bottom 20px !important
+
+@media (max-width 1024px)
+  .cabinet__blocks-wrapper-fill
+    clip-path polygon(50% 0,130px 40px,125px 268px,50% 304px,0 268px,0 37px)
