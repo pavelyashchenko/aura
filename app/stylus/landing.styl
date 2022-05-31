@@ -8,10 +8,7 @@
 .intro
   position relative
   margin-bottom 5rem
-  background-image url("../img/first/main-bg.webp")
-  background-repeat no-repeat
-  background-position center
-  background-size cover
+  background radial-gradient(50% 50% at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
 
 .intro__inner
   position relative
@@ -19,28 +16,15 @@
   align-items center
   justify-content space-between
   max-width 1250px
-  padding 14rem 15px 26rem
+  padding 23rem 15px 26rem
   margin 0 auto
 
-  &::before,
   &::after
     position absolute
     content ""
     background-repeat no-repeat
     background-size contain
     z-index -1
-
-  &::before
-    top -50px
-    left -15%
-    width 100%
-    max-width 650px
-    height 100%
-    background-image url("../img/first/elements-left.svg")
-    background-position left
-    opacity 0.4
-
-  &::after
     bottom -30px
     left 50%
     width 22px
@@ -57,6 +41,10 @@
 
 .intro__title
   margin-bottom 5px
+  font-weight 500
+  font-size 40px
+  line-height 48px
+  margin-bottom 17px
 
 .intro__message
   font-weight 300
@@ -96,19 +84,18 @@
     height 155%
     top -10% !important
     background-image url("../img/first/polygon-right.svg")
-  
+
   &-smokebot
     background-image url("../img/first/smoke-bottom.png")
     height 140%
 
   &-main
     background-image url("../img/first/nft-viz.webp")
-    opacity .8
+    opacity 0.8
 
   &-smoketop
     background-image url("../img/first/smoke-top.png")
     height 150%
-  
 
 .results
   background-image url("../img/second/results-bg.svg")
@@ -168,36 +155,6 @@
     line-height 5.4rem
     text-shadow 0px 2px 4px rgba(42, 249, 174, 0.69)
 
-.pass
-  position relative
-  margin-bottom 50px
-  padding-top 100px
-
-  &::before,
-  &::after
-    position absolute
-    content ""
-    width 100%
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
-
-  &::before
-    top 90%
-    right 0
-    transform translate(0, -50%)
-    max-width 1388px
-    height 3018px
-    background-image url("../img/third/green-light.webp")
-
-  &::after
-    bottom -50px
-    left 50%
-    transform translate(-50%, 0)
-    max-width 178px
-    height 5px
-    background-image url("../img/third/dots.svg")
-
 .pass__inner
   display flex
   align-items center
@@ -207,24 +164,10 @@
   margin 0 auto
 
 .pass__info
-  position relative
   max-width 500px
   text-align center
-  margin-right 25px
+  margin-left 25px
   width 50%
-
-  &::before
-    position absolute
-    top -100px
-    left -80px
-    content ""
-    width 100%
-    max-width 569px
-    height 644px
-    background-image url("../img/third/polygon-left.svg")
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
 
 .pass__title
   max-width 266px
@@ -240,10 +183,6 @@
 .pass__img
   position relative
   width 50%
-  background-image url("../img/third/polygon-right.svg")
-  background-position 112px 0
-  background-repeat no-repeat
-  background-size contain
 
   picture
     width 100%
@@ -252,27 +191,12 @@
     max-width 100%
 
 .how-it-works
-  position relative
   margin-bottom 6rem
   background-image url("../img/fourth/how-it-works-lines.svg")
   background-repeat no-repeat
-  background-position center
-  background-size contain
+  background-position center 380px
+  background-size auto
   padding-top 10rem
-
-  &::before
-    position absolute
-    top -940px
-    left 0
-    content ""
-    width 100%
-    max-width 1089px
-    height 3018px
-    background-image url("../img/fourth/green-light.webp")
-    background-repeat no-repeat
-    background-position center
-    background-size cover
-    z-index -1
 
 .how-it-works__inner
   position relative
@@ -289,8 +213,8 @@
   font-weight 300
   font-size 1.6rem
   line-height 2.1rem
-  max-width 662px
-  margin 0 auto 100px
+  max-width 834px
+  margin 0 auto 10px
 
   &:last-of-type
     margin-bottom 4rem
@@ -305,6 +229,7 @@
   justify-content space-between
   margin-bottom 100px
   transform translateX(-30px)
+  margin-top 100px
 
   .how-it-works__arrows
     .how-it-works__arrow
@@ -464,8 +389,26 @@
           content none
 
 .levels
-  margin-bottom 3rem
+  position relative
+  margin-bottom 10rem
   padding-top 10rem
+
+  &::before,
+  &::after
+    position absolute
+    content ""
+    width 150px
+    height 500px
+    bottom 0
+    z-index 10
+
+  &::before
+    left 0
+    background linear-gradient(90deg, #1E1E22 0%, rgba(30, 30, 34, 0.65) 42.71%, rgba(30, 30, 34, 0) 100%)
+
+  &::after
+    right 0
+    background linear-gradient(90deg, rgba(30, 30, 34, 0) 0%, rgba(30, 30, 34, 0.65) 46.35%, #1E1E22 100%)
 
 .levels__inner
   max-width 1112px
@@ -490,7 +433,7 @@
   padding-top 15rem
   background-image url("../img/sixth/benefits-lines.svg")
   background-repeat no-repeat
-  background-size cover
+  background-size auto
   background-position center
 
 .benefits__inner
@@ -509,30 +452,13 @@
   position relative
   padding-top 20vw
   padding-bottom 10vw
-  background-image url("../img/seventh/about-bg.webp")
-  background-repeat no-repeat
-  background-position center
-  background-size cover
+  background radial-gradient(294.63% 80.93% at 23.77% 98.85%, #139077 0%, rgba(17, 77, 65, 0.8) 51.56%, rgba(11, 39, 34, 0) 100%)
+  clip-path polygon(0 0, 100% 0, 100% 85%, 0% 100%)
 
 .about__inner
-  position relative
   max-width 1095px
   padding 0 15px
   margin 0 auto
-
-  &::before
-    position absolute
-    bottom -230px
-    left 50%
-    transform translate(-50%, 0)
-    content ""
-    width 100%
-    max-width 42px
-    height 178px
-    background-image url("../img/seventh/elements-center.svg")
-    background-repeat no-repeat
-    background-size contain
-    z-index -1
 
 .about__info
   position relative
@@ -563,6 +489,9 @@
   margin-bottom 32px
   text-align left
 
+  &:last-child
+    margin-bottom 0
+
 .about__img
   position absolute
   top -4px
@@ -579,7 +508,6 @@
 
 .roadmap__inner
   max-width 1000px
-  padding 0 15px
   margin 0 auto
 
 .roadmap__title
@@ -592,30 +520,20 @@
   margin-bottom 7rem
   padding-top 10rem
 
-  &::before,
-  &::after
+  &::before
     position absolute
     content ""
-    width 100%
-    background-repeat no-repeat
-    background-position center top
-    background-size contain
-    z-index -1
-
-  &::before
     top -80px
     left 50%
     transform translateX(-50%)
     max-width 1120px
     height 1292px
     background-image url("../img/nineth/faq-lines.svg")
-
-  &::after
-    top -2300px
-    left 0
-    max-width 1154px
-    height 3018px
-    background-image url("../img/nineth/faq-green.webp")
+    width 100%
+    background-repeat no-repeat
+    background-position center top
+    background-size contain
+    z-index -1
 
 .faq__inner
   text-align center

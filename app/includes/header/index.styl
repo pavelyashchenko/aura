@@ -191,6 +191,7 @@
     z-index 99
     transition top 0.5s, visibility 0.5s
     visibility hidden
+    overflow auto
 
     .header__menu
       width 100%
@@ -233,6 +234,9 @@
       backdrop-filter blur(16px)
 
   &.is-active
+    .header__mobile-top
+      background-color #1e1e22
+
     .header__mobile-inner
       visibility visible
       top 0

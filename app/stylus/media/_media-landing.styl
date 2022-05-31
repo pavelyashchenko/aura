@@ -20,13 +20,9 @@
     &-lines
       height 155%
 
-  .pass
-    &::before
-      top 100%
-
   .how-it-works__main
     max-width 710px
-    margin 0 auto 100px
+    margin 100px auto 100px
 
     .how-it-works__arrows
       #gray-arrow
@@ -86,22 +82,34 @@
         width 57px
         height 66px
 
+  .levels
+    &::before,
+    &::after
+      width 90px
+
   .about
     padding-top 60%
-    padding-bottom 5rem
+    padding-bottom 25rem
 
   .about__info
     margin 0 auto
 
   .about__img
-    top -23%
+    opacity .4
 
   .roadmap
     padding-top 15rem
 
 @media (max-width 768px)
   .intro
-    margin-bottom 30px
+    margin-bottom 0
+    background radial-gradient(400px 350px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
+
+  .intro__inner
+    padding-bottom 42rem
+
+    &::after
+      bottom 20px
 
   .intro__info
     padding-top 50px
@@ -128,9 +136,6 @@
 
   .pass
     margin-bottom 110px
-
-    &::before
-      top 250%
 
   .pass__message
     font-size 14px
@@ -255,8 +260,10 @@
     line-height 1.4
     margin 0 auto
 
-  .about__img
-    top -35%
+  .levels
+    &::before,
+    &::after
+      content none
 
 @media (max-width 650px)
   .intro
@@ -264,6 +271,10 @@
 
   .intro__inner
     flex-direction column
+    padding-bottom 27rem
+
+    &::after
+      bottom 20px
 
   .intro__info
     width 100%
@@ -318,15 +329,14 @@
     flex-direction column
 
   .pass__info
-    margin-right 0
+    margin-left 0
     width 100%
-    margin-bottom 60px
 
   .pass__img
     width 100%
 
     picture
-      width 79%
+      width 100%
 
   .how-it-works__main
     transform none
@@ -340,12 +350,6 @@
 
       &:last-child
         margin-bottom 50px
-
-  .about__inner
-    &::before
-      bottom -120px
-      max-width 25px
-      height 100px
 
 @media (max-width 425px)
   .intro__illustration
