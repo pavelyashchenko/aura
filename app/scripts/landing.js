@@ -173,12 +173,25 @@ const modalFaqLink = () => {
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
 		$('.faq__hidden-blocks').slideToggle(300);
+		
 		$(this).toggleClass('is-active');
-
 		if ($(this).hasClass('is-active')) {
 			$(this).text('Show less');
 		} else {
 			$(this).text('Learn more');
+		}
+	});
+};
+
+const showMoreTeam = () => {
+	$('.team__members-button').on('click', function () {
+		$('.team__members-wrapper:nth-child(n+5)').toggleClass('is-visible wow fadeInDown');
+
+		$(this).toggleClass('is-active');
+		if ($(this).hasClass('is-active')) {
+			$(this).text('Show less');
+		} else {
+			$(this).text('Show more');
 		}
 	});
 };
@@ -202,7 +215,7 @@ const parallaxInit = () => {
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			hide: false,
-			draggable: true
+			draggable: true,
 		},
 	});
 
@@ -212,7 +225,7 @@ const parallaxInit = () => {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-		}
+		},
 	});
 
 	// Functions init
@@ -225,5 +238,6 @@ const parallaxInit = () => {
 	}, 1700);
 	modalFaqLink();
 	showMoreFaq();
+	showMoreTeam();
 	parallaxInit();
 })();
