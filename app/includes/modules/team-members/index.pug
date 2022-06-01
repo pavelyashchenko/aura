@@ -10,6 +10,7 @@ mixin team-members(data)
           img(src=`${member.imageSrc}`, alt=`${member.imageSrc}`)
         h4.team__members-name= member.name
         p.team__members-position= member.position
+        a(href=`mailto:${member.email}`).team__members-email= member.email
 
   +button(type="button").team__members-button
     | Show more
