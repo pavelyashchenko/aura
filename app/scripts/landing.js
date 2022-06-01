@@ -173,7 +173,7 @@ const modalFaqLink = () => {
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
 		$('.faq__hidden-blocks').slideToggle(300);
-		
+
 		$(this).toggleClass('is-active');
 		if ($(this).hasClass('is-active')) {
 			$(this).text('Show less');
@@ -185,7 +185,9 @@ const showMoreFaq = () => {
 
 const showMoreTeam = () => {
 	$('.team__members-button').on('click', function () {
-		$('.team__members-wrapper:nth-child(n+5)').toggleClass('is-visible wow fadeInDown');
+		$('.team__members-wrapper:nth-child(n+5)').toggleClass(
+			'is-visible wow fadeInDown'
+		);
 
 		$(this).toggleClass('is-active');
 		if ($(this).hasClass('is-active')) {
@@ -196,14 +198,24 @@ const showMoreTeam = () => {
 	});
 };
 
+// Loader init
+const loaderInit = () => {
+	$('.modal-connect-button').on('click', function(e){
+		e.preventDefault();
+
+		$(this).css('display', 'none');
+		$('.loader').addClass('is-active');
+	});
+};
+
 // First screen parallax
 const parallaxInit = () => {
 	var scene = $('#parallax').get(0);
 	var parallaxInstance = new Parallax(scene);
 };
 
-// SLiders
 (function () {
+	// SLiders
 	var swiper = new Swiper('#price-blocks', {
 		direction: 'horizontal',
 		slidesPerView: 'auto',
@@ -240,4 +252,5 @@ const parallaxInit = () => {
 	showMoreFaq();
 	showMoreTeam();
 	parallaxInit();
+	loaderInit();
 })();
