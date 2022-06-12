@@ -269,7 +269,7 @@
   display flex
   align-items center
   justify-content space-between
-  margin-bottom 100px
+  margin-bottom 50px
 
   &-mint
     margin-right 30px
@@ -321,7 +321,119 @@
           background-color #8F7000
           border-color transparent
 
-.intro__bottom
+.spreadsheet
+  margin-bottom 100px
+
+.spreadsheet__inner
+  max-width 1030px
+  margin 0 auto
+  padding 0 15px
+  text-align center
+
+.table__wrapper
+  padding-bottom 25px
+  margin-bottom 25px
+
+.table
+  position relative
+  width 100%
+  border-collapse collapse
+  text-align left
+  border 1px solid #00C8A0
+
+  &::after
+    position absolute
+    content ""
+    left -1px
+    bottom -20px
+    width 101%
+    height 200px
+    background linear-gradient(0deg, #1E1E22 17.26%, rgba(30, 30, 34, 0) 81.76%)
+
+  &.is-active
+    &::after
+      display none
+
+  .thead
+    font-weight 700
+    font-size 20px
+    line-height 24px
+    letter-spacing 0.035em
+    color $white
+
+  .tbody
+    font-weight 300
+    font-size 16px
+    line-height 19px
+    letter-spacing 0.035em
+
+  .thead__row
+    th
+      font-weight bold
+      padding 46px 20px 41px
+
+      &:first-child
+        width 111px
+
+      &:nth-child(2)
+        width 370px
+
+      &:nth-child(3)
+        width 158px
+
+      &:last-child
+        width 113px
+
+  .tbody__row
+    &:first-child
+      td
+        padding-top 0
+
+    td
+      position relative
+      padding 10px 20px
+
+      &::after
+        position absolute
+        left 0
+        bottom 0
+        content ""
+        width 100%
+        height 1px
+        background-color #4B4B4E
+
+      &:first-child
+        &::after
+          width 92%
+          right 0
+          left auto
+
+      &:last-child
+        &::after
+          width 90%
+
+      &:first-child
+        width 111px
+
+      &:nth-child(2)
+        width 370px
+
+      &:nth-child(3)
+        width 158px
+
+      &:last-child
+          width 113px
+
+    .amount--green
+      color #20EEBC
+
+    .amount--red
+      color #F13131
+
+    &:nth-child(n+11)
+      display none
+
+.poweredby
   &-inner
     display flex
     align-items center

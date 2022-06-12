@@ -164,12 +164,139 @@ block main
                 },
               ]
             })
-        
-      .intro__bottom
-        .intro__bottom-inner
-          p.intro__bottom-text System powered by
-          .intro__bottom-logo
-            img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
+
+  section.spreadsheet
+    .spreadsheet__inner
+      .table__wrapper
+        table.table
+          thead.thead
+            tr.thead__row
+              th 
+                span Date (UTC)
+              th 
+                span Description
+              th 
+                span Amount
+              th 
+                span Reward Balance
+          tbody.tbody
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+
+      +button(type="button").table-show-more
+        | Learn more
+
+  section.poweredby
+    .poweredby-inner
+      p.poweredby-text System powered by
+      .poweredby-logo
+        img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
 
   +modal-error()
   +modal-nft()
