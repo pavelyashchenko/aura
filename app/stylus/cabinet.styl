@@ -1,5 +1,6 @@
 @import "base/_global"
 @import "../includes/modules/cabinet/slider-blocks/index.styl"
+@import "../includes/modules/cabinet/tooltip/index.styl"
 
 .intro
   background radial-gradient(800px 570px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
@@ -80,7 +81,7 @@
           display flex
           align-items center
           justify-content space-between
-          margin-bottom 10px
+          margin-bottom 20px
           width 100px
 
           .first-title
@@ -96,6 +97,7 @@
             color #20EEBC
 
         &-second
+          position relative
           display flex
           align-items center
           justify-content space-between
@@ -275,11 +277,16 @@
     margin-right 30px
 
     .mint-title
+      position relative
+      display inline-block
       font-weight 700
       font-size 2rem
       line-height 2.4rem
       letter-spacing 0.035em
       margin-bottom 17px
+
+      .tooltip
+        right -25px
 
     .mint-blocks
       display flex
@@ -422,7 +429,7 @@
         width 158px
 
       &:last-child
-          width 113px
+        width 113px
 
     .amount--green
       color #20EEBC

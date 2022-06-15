@@ -1,5 +1,6 @@
 extends ../includes/page
 
+include ../includes/modules/cabinet/tooltip/index
 include ../includes/modules/cabinet/slider-blocks/index
 
 block head
@@ -36,6 +37,9 @@ block main
                 .first-info YES
               .qualification__info-second
                 button(data-izimodal-open="#modal-error").turbo Buy Turbo
+                +tooltip({
+                  info: "I - Qualification purchase: You don't need to attract new members to participate in passive income. After purchasing a qualification, you will automatically queue up for payment."
+                })
 
         .intro__top-right
           .top
@@ -64,6 +68,8 @@ block main
               .reward__buttons
                 +button(href="#" data-izimodal-open="#modal-error")
                   | Withdraw
+                +button(href="#spreadsheet")
+                  | View History
             
             .invited
               .invited__left 
@@ -83,6 +89,9 @@ block main
       .intro__middle
         .intro__middle-mint
           h4.mint-title Mint NFT
+            +tooltip({
+              info: "MINT block: Green - you have an NFT of that level. Orange - you don't own this NFT and it is available for minting. Black - not available for minting. To mint NFT, you need to select a price level and click on it."
+            })
 
           .mint-blocks
             a.mint-block.mint-block--green(href="#")
@@ -118,8 +127,9 @@ block main
                   summ: "0.125",
                   currency: "BNB",
                   percent: "100",
-                  button: "Off",
-                  fill: "100"
+                  button: "Mint",
+                  fill: "100",
+                  tooltip: "Minting of this level is available. To do it, you need to press the Mint button."
                 },
                 {
                   type: "button",
@@ -127,15 +137,17 @@ block main
                   currency: "BNB",
                   percent: "35",
                   button: "On",
-                  fill: "35"
+                  fill: "35",
+                  tooltip: "Enable / disable auto-reinvestment. With auto-reinvestment enabled, after the payout, the wallet address is queued again (you will receive 200% of the level price, 100% will be credited as a reward and 100% to pay for a place in the queue). With auto-reinvestment turned off, you will receive 200% of the level price and drop out of the queue. To join the queue again, you need to click the Off button, and you will need to pay for a place in the queue"
                 },
                 {
                   type: "button",
                   summ: "0.5",
                   currency: "BNB",
                   percent: "0",
-                  button: "Off",
-                  fill: "0"
+                  button: "On",
+                  fill: "0",
+                  tooltip: "Enable / disable auto-reinvestment. With auto-reinvestment enabled, after the payout, the wallet address is queued again (you will receive 200% of the level price, 100% will be credited as a reward and 100% to pay for a place in the queue). With auto-reinvestment turned off, you will receive 200% of the level price and drop out of the queue. To join the queue again, you need to click the Off button, and you will need to pay for a place in the queue"
                 },
                 {
                   type: "simple",
@@ -165,7 +177,7 @@ block main
               ]
             })
 
-  section.spreadsheet
+  section.spreadsheet#spreadsheet
     .spreadsheet__inner
       .table__wrapper
         table.table

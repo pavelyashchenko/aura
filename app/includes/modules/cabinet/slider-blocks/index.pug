@@ -17,7 +17,13 @@ mixin cabinet-blocks(data)
                 .cabinet__blocks-percentage
                   span= block.percent
                     | %
-                +button(type="button" data-izimodal-open="#modal-error")= block.button
+                .cabinet__blocks-button
+                  +button(type="button" data-izimodal-open="#modal-error")= block.button
+                  .tooltip
+                    .tooltip__inner
+                      .tooltip__icon
+                        img(src="img/cabinet/info.svg", alt="Info")
+                      p.tooltiptext= block.tooltip
 
             if (block.type === "simple")
               .cabinet__blocks-wrapper-inner
